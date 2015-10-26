@@ -20,6 +20,8 @@
 		61D3AA9B1BDDEA6F00BFE544 /* AnswerChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AA991BDDEA6F00BFE544 /* AnswerChoice.swift */; };
 		61D3AA9D1BDDEA6F00BFE544 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AA9C1BDDEA6F00BFE544 /* Question.swift */; };
 		61D3AA9E1BDDEA6F00BFE544 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AA9C1BDDEA6F00BFE544 /* Question.swift */; };
+		61D3AAA41BDECD2A00BFE544 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AAA31BDECD2A00BFE544 /* CoreDataManager.swift */; };
+		61D3AAA51BDECD2A00BFE544 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AAA31BDECD2A00BFE544 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		61D3AA961BDDBFFA00BFE544 /* DB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DB.xcdatamodel; sourceTree = "<group>"; };
 		61D3AA991BDDEA6F00BFE544 /* AnswerChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerChoice.swift; sourceTree = "<group>"; };
 		61D3AA9C1BDDEA6F00BFE544 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		61D3AAA31BDECD2A00BFE544 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,7 @@
 				61D3AA9C1BDDEA6F00BFE544 /* Question.swift */,
 				61D3AA991BDDEA6F00BFE544 /* AnswerChoice.swift */,
 				61D3AA951BDDBFFA00BFE544 /* DB.xcdatamodeld */,
+				61D3AAA31BDECD2A00BFE544 /* CoreDataManager.swift */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -240,6 +244,7 @@
 				61D3AA731BDDBFBD00BFE544 /* AppDelegate.swift in Sources */,
 				61D3AA9D1BDDEA6F00BFE544 /* Question.swift in Sources */,
 				61D3AA751BDDBFBD00BFE544 /* FirstViewController.swift in Sources */,
+				61D3AAA41BDECD2A00BFE544 /* CoreDataManager.swift in Sources */,
 				61D3AA9A1BDDEA6F00BFE544 /* AnswerChoice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +256,7 @@
 				61D3AA8B1BDDBFBD00BFE544 /* SAHCTests.swift in Sources */,
 				61D3AA9E1BDDEA6F00BFE544 /* Question.swift in Sources */,
 				61D3AA981BDDBFFA00BFE544 /* DB.xcdatamodeld in Sources */,
+				61D3AAA51BDECD2A00BFE544 /* CoreDataManager.swift in Sources */,
 				61D3AA9B1BDDEA6F00BFE544 /* AnswerChoice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
