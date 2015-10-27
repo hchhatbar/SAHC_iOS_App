@@ -18,5 +18,11 @@ class Question: NSManagedObject {
     @NSManaged var tipText: String
     @NSManaged var helper: String
     @NSManaged var answer: [AnswerChoice]
+    
+    // Standard Core Data init method.
+    override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertIntoManagedObjectContext: context)
+    }
+
 
 }

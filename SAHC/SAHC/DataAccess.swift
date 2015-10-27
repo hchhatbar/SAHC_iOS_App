@@ -35,11 +35,33 @@ class DataAccess: NSObject{
         return results
     }
     
-    func saveQuestions(weekDictionary: [String : AnyObject],weekDetailDictionary: [String : AnyObject])
+    func saveQuestions()
     {
         
+        let context =  managedObjectContext //CoreDataManager.sharedManager.managedObjectContext
+        let entity =  NSEntityDescription.entityForName("Question", inManagedObjectContext: context)!
+
+        var question = Question(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
         
-       /* let questions = Week(dictionary: weekDictionary, context: managedObjectContext)
+        question.questionId = "testId"
+        question.questionText = "some question text"
+        question.questionType = "some question type"
+        question.categoryId = 1
+        question.tipText = "some tip text"
+        question.helper = "some helper text"
+        
+        var answerChoice = AnswerChoice()
+        answerChoice.answerId = 2
+        answerChoice.answer = "some answer text"
+        
+        var answerChoiceList:[AnswerChoice] = []
+        answerChoiceList.append(answerChoice)
+        
+        question.answer = answerChoiceList
+
+        CoreDataManager.sharedManager.saveContext()
+        
+        /* let questions = Week(dictionary: weekDictionary, context: managedObjectContext)
         
         let weekDetail1 = WeekDetail(dictionary: weekDetailDictionary, context: managedObjectContext)
         let weekDetail2 = WeekDetail(dictionary: weekDetailDictionary, context: managedObjectContext)

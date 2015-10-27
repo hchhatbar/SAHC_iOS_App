@@ -35,11 +35,12 @@ class CoreDataManager {
     // Schema for the application
     lazy var managedObjectModel:NSManagedObjectModel = {
         // This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("sahc", withExtension: "momd")!
+        let modelURL = NSBundle.mainBundle().URLForResource("DB", withExtension: "momd")!
         
         return NSManagedObjectModel(contentsOfURL: modelURL)!
         }()
     
+
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.AppForCause.TestCoreData" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
