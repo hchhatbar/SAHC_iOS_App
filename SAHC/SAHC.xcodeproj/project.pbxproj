@@ -22,6 +22,9 @@
 		61D3AA9E1BDDEA6F00BFE544 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AA9C1BDDEA6F00BFE544 /* Question.swift */; };
 		61D3AAA41BDECD2A00BFE544 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AAA31BDECD2A00BFE544 /* CoreDataManager.swift */; };
 		61D3AAA51BDECD2A00BFE544 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AAA31BDECD2A00BFE544 /* CoreDataManager.swift */; };
+		61D3AADA1BDF16F000BFE544 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AAD91BDF16F000BFE544 /* Answer.swift */; };
+		61D3AADF1BDF17B300BFE544 /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AADE1BDF17B300BFE544 /* DataAccess.swift */; };
+		61D3AAE01BDF17B300BFE544 /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AADE1BDF17B300BFE544 /* DataAccess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,8 @@
 		61D3AA991BDDEA6F00BFE544 /* AnswerChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerChoice.swift; sourceTree = "<group>"; };
 		61D3AA9C1BDDEA6F00BFE544 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		61D3AAA31BDECD2A00BFE544 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		61D3AAD91BDF16F000BFE544 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		61D3AADE1BDF17B300BFE544 /* DataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,10 +136,12 @@
 		61D3AA941BDDBFC600BFE544 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				61D3AAD91BDF16F000BFE544 /* Answer.swift */,
 				61D3AA9C1BDDEA6F00BFE544 /* Question.swift */,
 				61D3AA991BDDEA6F00BFE544 /* AnswerChoice.swift */,
 				61D3AA951BDDBFFA00BFE544 /* DB.xcdatamodeld */,
 				61D3AAA31BDECD2A00BFE544 /* CoreDataManager.swift */,
+				61D3AADE1BDF17B300BFE544 /* DataAccess.swift */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -246,6 +253,8 @@
 				61D3AA751BDDBFBD00BFE544 /* FirstViewController.swift in Sources */,
 				61D3AAA41BDECD2A00BFE544 /* CoreDataManager.swift in Sources */,
 				61D3AA9A1BDDEA6F00BFE544 /* AnswerChoice.swift in Sources */,
+				61D3AADF1BDF17B300BFE544 /* DataAccess.swift in Sources */,
+				61D3AADA1BDF16F000BFE544 /* Answer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61D3AA8B1BDDBFBD00BFE544 /* SAHCTests.swift in Sources */,
+				61D3AAE01BDF17B300BFE544 /* DataAccess.swift in Sources */,
 				61D3AA9E1BDDEA6F00BFE544 /* Question.swift in Sources */,
 				61D3AA981BDDBFFA00BFE544 /* DB.xcdatamodeld in Sources */,
 				61D3AAA51BDECD2A00BFE544 /* CoreDataManager.swift in Sources */,
@@ -445,6 +455,7 @@
 				61D3AA901BDDBFBD00BFE544 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61D3AA911BDDBFBD00BFE544 /* Build configuration list for PBXNativeTarget "SAHCTests" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +464,7 @@
 				61D3AA931BDDBFBD00BFE544 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
