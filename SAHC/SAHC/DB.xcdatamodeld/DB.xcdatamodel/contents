@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Answer" representedClassName="PRODUCT_MODULE_NAME.Answer" syncable="YES">
+    <entity name="Answer" representedClassName="Answer" syncable="YES">
         <attribute name="answerId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="answerText" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="questionId" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="AnswerChoice" representedClassName="PRODUCT_MODULE_NAME.AnswerChoice" syncable="YES">
+    <entity name="AnswerChoice" representedClassName="AnswerChoice" syncable="YES">
         <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answerId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="answer" inverseEntity="Question" syncable="YES"/>
     </entity>
-    <entity name="Question" representedClassName="PRODUCT_MODULE_NAME.Question" syncable="YES">
+    <entity name="Question" representedClassName="Question" syncable="YES">
         <attribute name="categoryId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="helper" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="questionId" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,8 +20,8 @@
         <relationship name="answer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnswerChoice" inverseName="question" inverseEntity="AnswerChoice" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Question" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="AnswerChoice" positionX="-54" positionY="36" width="128" height="90"/>
         <element name="Answer" positionX="-27" positionY="72" width="128" height="90"/>
+        <element name="AnswerChoice" positionX="-54" positionY="36" width="128" height="90"/>
+        <element name="Question" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

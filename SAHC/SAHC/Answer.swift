@@ -9,10 +9,13 @@
 import Foundation
 import CoreData
 
+@objc(Answer)
 class Answer: NSManagedObject {
 
     @NSManaged var questionId: String
     @NSManaged var answerId: NSNumber
     @NSManaged var answerText: String
-
+    
+    
+   
 }

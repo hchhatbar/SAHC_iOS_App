@@ -40,7 +40,8 @@ class DataAccess: NSObject{
         
         let context =  managedObjectContext //CoreDataManager.sharedManager.managedObjectContext
         let entity =  NSEntityDescription.entityForName("Question", inManagedObjectContext: context)!
-
+        
+        let answerChoiceEntity =  NSEntityDescription.entityForName("AnswerChoice", inManagedObjectContext: context)!
         var question = Question(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
         
         question.questionId = "testId"
@@ -50,7 +51,7 @@ class DataAccess: NSObject{
         question.tipText = "some tip text"
         question.helper = "some helper text"
         
-        var answerChoice = AnswerChoice()
+        var answerChoice = AnswerChoice(entity: answerChoiceEntity, insertIntoManagedObjectContext: managedObjectContext)
         answerChoice.answerId = 2
         answerChoice.answer = "some answer text"
         
