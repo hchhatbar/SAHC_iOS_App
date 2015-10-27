@@ -14,8 +14,8 @@ class AnswerChoice: NSManagedObject {
 
     @NSManaged var answerId: NSNumber
     @NSManaged var answer: String
-    @NSManaged var question: NSManagedObject
-
+    @NSManaged var question: Question
+   
     // Standard Core Data init method.
     override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
         super.init(entity: entity, insertIntoManagedObjectContext: context)

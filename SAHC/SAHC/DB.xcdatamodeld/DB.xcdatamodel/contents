@@ -17,7 +17,7 @@
         <attribute name="questionText" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="questionType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tipText" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="answer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnswerChoice" inverseName="question" inverseEntity="AnswerChoice" syncable="YES"/>
+        <relationship name="answer" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="AnswerChoice" inverseName="question" inverseEntity="AnswerChoice" syncable="YES"/>
     </entity>
     <elements>
         <element name="Answer" positionX="-27" positionY="72" width="128" height="90"/>

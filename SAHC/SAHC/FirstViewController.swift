@@ -15,6 +15,7 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         var dataAccess = DataAccess()
         dataAccess.saveQuestions()
+        var results = dataAccess.getQuestions()
     }
 
     override func didReceiveMemoryWarning() {
