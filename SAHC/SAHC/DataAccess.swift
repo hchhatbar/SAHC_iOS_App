@@ -43,8 +43,8 @@ class DataAccess: NSObject{
         
         let answerChoiceEntity =  NSEntityDescription.entityForName("AnswerChoice", inManagedObjectContext: context)!
         var question = Question(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
-        
-        question.questionId = "testId"
+        /*
+        question.questionId = "testIdP"
         question.questionText = "some question text"
         question.questionType = "some question type"
         question.categoryId = 1
@@ -52,7 +52,7 @@ class DataAccess: NSObject{
         question.helper = "some helper text"
         
         let answerChoice = AnswerChoice(entity: answerChoiceEntity, insertIntoManagedObjectContext: managedObjectContext)
-        answerChoice.answerId = 2
+        answerChoice.answerId = 3
         answerChoice.answer = "some answer text"
         
         let answerChoiceSet = NSOrderedSet(array: [answerChoice])
@@ -61,20 +61,9 @@ class DataAccess: NSObject{
         
         question.answer = answerChoiceSet
 
-        CoreDataManager.sharedManager.saveContext()
+        CoreDataManager.sharedManager.saveContext()*/
         
-        /* 
-        let weekToBeAdded = Week(dictionary: weekDictionary, context: managedObjectContext)
-        
-        let weekDetail1 = WeekDetail(dictionary: weekDetailDictionary, context: managedObjectContext)
-        let weekDetail2 = WeekDetail(dictionary: weekDetailDictionary, context: managedObjectContext)
-        //let weekDetailArray = [WeekDetail()]
-        
-        let orderedSet = NSOrderedSet(array: [weekDetail1,weekDetail2])
-        weekToBeAdded.weekDetail = orderedSet
-        CoreDataManager.sharedManager.saveContext(managedObjectContext)
-        */
-        
+              
     }
 
     

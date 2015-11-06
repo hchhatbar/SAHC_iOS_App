@@ -6,22 +6,30 @@
         <attribute name="questionId" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="AnswerChoice" representedClassName="AnswerChoice" syncable="YES">
-        <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="answerId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="abbreviation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="answer_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="href" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sort_order" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Question" inverseName="answer" inverseEntity="Question" syncable="YES"/>
     </entity>
     <entity name="Question" representedClassName="Question" syncable="YES">
-        <attribute name="categoryId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="abbreviation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="active" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="helper" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="questionId" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="questionText" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="questionType" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="tipText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="href" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sort_order" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tip_text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="answer" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="AnswerChoice" inverseName="question" inverseEntity="AnswerChoice" syncable="YES"/>
     </entity>
     <elements>
         <element name="Answer" positionX="-27" positionY="72" width="128" height="90"/>
-        <element name="AnswerChoice" positionX="-54" positionY="36" width="128" height="90"/>
-        <element name="Question" positionX="-63" positionY="-18" width="128" height="150"/>
+        <element name="AnswerChoice" positionX="-54" positionY="36" width="128" height="150"/>
+        <element name="Question" positionX="-63" positionY="-18" width="128" height="210"/>
     </elements>
 </model>
