@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+@objc(Answer)
 class Answer: NSManagedObject {
 
     @NSManaged var answerId: NSNumber

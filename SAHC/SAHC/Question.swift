@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+@objc(Question)
 class Question: NSManagedObject {
 
     @NSManaged var category: String
@@ -18,8 +19,8 @@ class Question: NSManagedObject {
     @NSManaged var abbreviation: String
     @NSManaged var type: String
     @NSManaged var label: String
-    @NSManaged var sort_order: String
-    @NSManaged var active: NSNumber
+    @NSManaged var sort_order: NSNumber
+    @NSManaged var active: String
     @NSManaged var href: String
     @NSManaged var answer: NSOrderedSet
 

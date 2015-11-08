@@ -17,19 +17,15 @@ class FirstViewController: UIViewController {
         // Get the #1 app name from iTunes and SwiftyJSON
         Service.getQuestionsWithSuccess { (questions) -> Void in
             let json = JSON(data: questions)
-            //var jsonArray = json[].array
             
-            for item in 0...json.count{
-                //println(item)
-                println(json[item]["text"].string)
-            }
-            if let appName = json[].array {//["text"].string {
-                println("NSURLSession: \(appName)")
-            }
+            var dataAccess = DataAccess()
+            dataAccess.saveQuestions(json)
+            var results = dataAccess.getQuestions()
             // More soon...
             
             //1
-           /* if let appArray = json["feed"]["entry"].array {
+           /* 
+                       if let appArray = json["feed"]["entry"].array {
                 //2
                 var apps = [AppModel]()
                 

@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+@objc(AnswerChoice)
 class AnswerChoice: NSManagedObject {
 
     @NSManaged var answer_description: String
