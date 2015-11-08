@@ -13,6 +13,10 @@
 		6173972B1BEC31A400D477E9 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617397291BEC31A400D477E9 /* Answer.swift */; };
 		6173972D1BEC31A400D477E9 /* AnswerChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6173972C1BEC31A400D477E9 /* AnswerChoice.swift */; };
 		6173972E1BEC31A400D477E9 /* AnswerChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6173972C1BEC31A400D477E9 /* AnswerChoice.swift */; };
+		617397341BED94DA00D477E9 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617397331BED94DA00D477E9 /* Service.swift */; };
+		617397351BED94DA00D477E9 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617397331BED94DA00D477E9 /* Service.swift */; };
+		617397371BED989400D477E9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617397361BED989400D477E9 /* SwiftyJSON.swift */; };
+		617397381BED989400D477E9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617397361BED989400D477E9 /* SwiftyJSON.swift */; };
 		61D3AA731BDDBFBD00BFE544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AA721BDDBFBD00BFE544 /* AppDelegate.swift */; };
 		61D3AA751BDDBFBD00BFE544 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AA741BDDBFBD00BFE544 /* FirstViewController.swift */; };
 		61D3AA771BDDBFBD00BFE544 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AA761BDDBFBD00BFE544 /* SecondViewController.swift */; };
@@ -42,6 +46,8 @@
 		617397261BEC31A300D477E9 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		617397291BEC31A400D477E9 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		6173972C1BEC31A400D477E9 /* AnswerChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerChoice.swift; sourceTree = "<group>"; };
+		617397331BED94DA00D477E9 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		617397361BED989400D477E9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		61D3AA6D1BDDBFBD00BFE544 /* SAHC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAHC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D3AA711BDDBFBD00BFE544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61D3AA721BDDBFBD00BFE544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 		61D3AA641BDDBFBD00BFE544 = {
 			isa = PBXGroup;
 			children = (
+				617397361BED989400D477E9 /* SwiftyJSON.swift */,
 				61D3AA6F1BDDBFBD00BFE544 /* SAHC */,
 				61D3AA871BDDBFBD00BFE544 /* SAHCTests */,
 				61D3AA6E1BDDBFBD00BFE544 /* Products */,
@@ -105,6 +112,7 @@
 				61D3AA7B1BDDBFBD00BFE544 /* Images.xcassets */,
 				61D3AA7D1BDDBFBD00BFE544 /* LaunchScreen.xib */,
 				61D3AA701BDDBFBD00BFE544 /* Supporting Files */,
+				617397331BED94DA00D477E9 /* Service.swift */,
 			);
 			path = SAHC;
 			sourceTree = "<group>";
@@ -250,10 +258,12 @@
 				61D3AA771BDDBFBD00BFE544 /* SecondViewController.swift in Sources */,
 				61D3AA971BDDBFFA00BFE544 /* DB.xcdatamodeld in Sources */,
 				61D3AA731BDDBFBD00BFE544 /* AppDelegate.swift in Sources */,
+				617397371BED989400D477E9 /* SwiftyJSON.swift in Sources */,
 				6173972A1BEC31A400D477E9 /* Answer.swift in Sources */,
 				617397271BEC31A300D477E9 /* Question.swift in Sources */,
 				61D3AA751BDDBFBD00BFE544 /* FirstViewController.swift in Sources */,
 				61D3AAA41BDECD2A00BFE544 /* CoreDataManager.swift in Sources */,
+				617397341BED94DA00D477E9 /* Service.swift in Sources */,
 				61D3AADF1BDF17B300BFE544 /* DataAccess.swift in Sources */,
 				6173972D1BEC31A400D477E9 /* AnswerChoice.swift in Sources */,
 			);
@@ -264,10 +274,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				61D3AA8B1BDDBFBD00BFE544 /* SAHCTests.swift in Sources */,
+				617397351BED94DA00D477E9 /* Service.swift in Sources */,
 				61D3AAE01BDF17B300BFE544 /* DataAccess.swift in Sources */,
 				61D3AA981BDDBFFA00BFE544 /* DB.xcdatamodeld in Sources */,
 				6173972B1BEC31A400D477E9 /* Answer.swift in Sources */,
 				617397281BEC31A300D477E9 /* Question.swift in Sources */,
+				617397381BED989400D477E9 /* SwiftyJSON.swift in Sources */,
 				61D3AAA51BDECD2A00BFE544 /* CoreDataManager.swift in Sources */,
 				6173972E1BEC31A400D477E9 /* AnswerChoice.swift in Sources */,
 			);
