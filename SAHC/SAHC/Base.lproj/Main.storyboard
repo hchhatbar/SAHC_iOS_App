@@ -69,6 +69,9 @@
                                 <state key="normal" title="Button" image="Introduction">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="introductionClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="2MZ-3E-t4w"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOp-5C-KpF">
                                 <rect key="frame" x="16" y="116" width="50" height="50"/>
@@ -249,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="-178"/>
+            <point key="canvasLocation" x="1540" y="-214"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

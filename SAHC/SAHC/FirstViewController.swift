@@ -10,6 +10,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    var scroll = UIScrollView()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,8 +48,17 @@ class FirstViewController: UIViewController {
     }
     }
     
-    
+    override func viewWillAppear(animated: Bool) {
+        scroll.backgroundColor = UIColor.redColor();
+        scroll.scrollEnabled = true
+        scroll.pagingEnabled = true;
+        self.view.addSubview(scroll)
+    }
 
+    @IBAction func introductionClicked(sender: AnyObject) {
+        var questionTableViewController = QuestionTableViewController()
+        self.view.addSubview(questionTableViewController.view)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
