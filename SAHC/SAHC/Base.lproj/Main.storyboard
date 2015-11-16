@@ -16,7 +16,21 @@
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtF-e3-iAU">
+                                <rect key="frame" x="0.0" y="0.0" width="601" height="44"/>
+                                <color key="barTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Title" id="7dR-uA-Miq"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wtF-e3-iAU" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="3vE-Em-dw8"/>
+                            <constraint firstItem="wtF-e3-iAU" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="7m8-V0-LmN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wtF-e3-iAU" secondAttribute="trailing" constant="-17" id="hPh-kf-rLW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                 </viewController>
