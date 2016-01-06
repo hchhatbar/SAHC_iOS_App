@@ -12,15 +12,39 @@ let restURL = "http://afc.nijhazer.com/questions"
 
 class Service {
     
-    class func getQuestionsWithSuccess(success: ((questions: NSData!) -> Void)) {
+
+        class func getQuestions(completion: ((questions:NSData!) -> Void)) {
+        let url = NSURL( string: "https://southasianheartcenter.org/sathiapi/questions.php")
         
-        loadDataFromURL(NSURL(string: restURL)!, completion:{(data, error) -> Void in
-            if let urlData = data {
-                success(questions: urlData)
+        //var picUrl = NSURL(string : "http://210.61.209.194:8088/SmarttvMedia/img/epi00001.png")
+        var responseString : NSString = ""
+        
+        func forData(completion: (NSString) -> ()) {
+            
+            let request = NSMutableURLRequest( URL: url!)
+            request.HTTPMethod = "POST"
+            var s : NSString = ""
+            let postString : String = "json={\"key\":\"1e34dfd3cbf383d348a5081be48cc821\"}"
+            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+                data, response, error in
+                println("****** COMPLETION **********")
+                println(data);
+                if error != nil {
+                    println("error=\(error)")
+                    return
+                } else {
+                    
+                    completion(NSString(data: data, encoding: NSUTF8StringEncoding)!)
+                    println("****** COMPLETION **********")
+                    println(data);
+                }
             }
-        })
+            task.resume()
+            
+        }
     }
-    
     class func loadDataFromURL(url: NSURL, completion:(data: NSData?, error: NSError?) -> Void) {
         var session = NSURLSession.sharedSession()
         

@@ -1,0 +1,3092 @@
+{
+    "questions": [
+                  {
+                  "abbreviation": "maritalStat",
+                  "category": {
+                  "description": "Category 1"
+                  },
+                  "type": "rb",
+                  "text": "Are you married, never married, divorced, separated, or widowed?",
+                  "label": "Marital Status",
+                  "tip_text": "There is a documented relationship between marital status and outcome of coronary artery disease. If you are married, consider involving your spouse in your health-care program in order to increase the odds of making the appropriate lifestyle changes nece",
+                  "answer_options": [
+                                     {
+                                     "description": "Married",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "14"
+                                     },
+                                     {
+                                     "description": "Never married",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "16"
+                                     },
+                                     {
+                                     "description": "Divorced",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "18"
+                                     },
+                                     {
+                                     "description": "Separated",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "20"
+                                     },
+                                     {
+                                     "description": "Widowed",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "22"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "livingStat",
+                  "category": {
+                  "description": "Category 1"
+                  },
+                  "type": "rb",
+                  "text": "Who are the other members of your household?",
+                  "label": "Household Members",
+                  "tip_text": "People who have a stable and supportive living environment tend to have a better outcome in the presence of heart disease. Multiple studies have reported that a happy home life is associated with reduced risk of heart disease.",
+                  "answer_options": [
+                                     {
+                                     "description": "None, I live alone",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "28"
+                                     },
+                                     {
+                                     "description": "Spouse only",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "30"
+                                     },
+                                     {
+                                     "description": "Children/Spouse and children",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "32"
+                                     },
+                                     {
+                                     "description": "Parents/Other relatives",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "34"
+                                     },
+                                     {
+                                     "description": "Roommate(s)",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "36"
+                                     },
+                                     {
+                                     "description": "Significant other",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "38"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "religion",
+                  "category": {
+                  "description": "Category 1"
+                  },
+                  "type": "rb",
+                  "text": "Do you practice any religion?  If so,  which one?",
+                  "label": "Religion",
+                  "tip_text": "Religious preferences are helpful in developing appropriate dietary recommendations.",
+                  "answer_options": [
+                                     {
+                                     "description": "None",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "44"
+                                     },
+                                     {
+                                     "description": "Buddhism",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "46"
+                                     },
+                                     {
+                                     "description": "Christianity",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "48"
+                                     },
+                                     {
+                                     "description": "Hinduism",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "50"
+                                     },
+                                     {
+                                     "description": "Islam",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "52"
+                                     },
+                                     {
+                                     "description": "Jainism",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "54"
+                                     },
+                                     {
+                                     "description": "Judaism",
+                                     "type": "choices",
+                                     "value": "7",
+                                     "sort_order": "56"
+                                     },
+                                     {
+                                     "description": "Sikhism",
+                                     "type": "choices",
+                                     "value": "8",
+                                     "sort_order": "58"
+                                     },
+                                     {
+                                     "description": "Zoroastrianism",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "60"
+                                     },
+                                     {
+                                     "description": "Other",
+                                     "type": "choices",
+                                     "value": "10",
+                                     "sort_order": "62"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "education",
+                  "category": {
+                  "description": "Category 1"
+                  },
+                  "type": "rb",
+                  "text": "What is your highest educational degree/level?",
+                  "label": "Education",
+                  "tip_text": "There is a documented relationship between the level of education and the incidence and outcomes of heart disease.",
+                  "answer_options": [
+                                     {
+                                     "description": "No schooling",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "68"
+                                     },
+                                     {
+                                     "description": "Elementary School",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "70"
+                                     },
+                                     {
+                                     "description": "Middle School",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "72"
+                                     },
+                                     {
+                                     "description": "High School",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "74"
+                                     },
+                                     {
+                                     "description": "Some college",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "76"
+                                     },
+                                     {
+                                     "description": "Associate/2yr college",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "78"
+                                     },
+                                     {
+                                     "description": "Undergraduate/4yr college",
+                                     "type": "choices",
+                                     "value": "7",
+                                     "sort_order": "80"
+                                     },
+                                     {
+                                     "description": "Graduate/Masters",
+                                     "type": "choices",
+                                     "value": "8",
+                                     "sort_order": "82"
+                                     },
+                                     {
+                                     "description": "Post-Graduate/PhD",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "84"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "houseEmploy",
+                  "category": {
+                  "description": "Category 1"
+                  },
+                  "type": "rb",
+                  "text": "What is the highest job level in your household, held either by you or any another member of your household?",
+                  "label": "Household Job Level",
+                  "tip_text": "High job level(s) in the household and associated stress levels may be associated with heart disease.",
+                  "answer_options": [
+                                     {
+                                     "description": "Manager/Senior Official",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "90"
+                                     },
+                                     {
+                                     "description": "Professional",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "92"
+                                     },
+                                     {
+                                     "description": "Professional/Technical ",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "94"
+                                     },
+                                     {
+                                     "description": "Admin/Secretarial ",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "96"
+                                     },
+                                     {
+                                     "description": "Skilled Trade",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "98"
+                                     },
+                                     {
+                                     "description": "Personal Service ",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "100"
+                                     },
+                                     {
+                                     "description": "Sales/Customer Service",
+                                     "type": "choices",
+                                     "value": "7",
+                                     "sort_order": "102"
+                                     },
+                                     {
+                                     "description": "Process/Machine Operator",
+                                     "type": "choices",
+                                     "value": "8",
+                                     "sort_order": "104"
+                                     },
+                                     {
+                                     "description": "Retired",
+                                     "type": "choices",
+                                     "value": "10",
+                                     "sort_order": "106"
+                                     },
+                                     {
+                                     "description": "Other",
+                                     "type": "choices",
+                                     "value": "11",
+                                     "sort_order": "108"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "work",
+                  "category": {
+                  "description": "Category 1"
+                  },
+                  "type": "rb",
+                  "text": "Which of the following best describes your current occupation?",
+                  "label": "Current Occupation",
+                  "tip_text": "Being employed is associated with improved longevity and health",
+                  "answer_options": [
+                                     {
+                                     "description": "Employed",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "114"
+                                     },
+                                     {
+                                     "description": "Student (including working students)",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "116"
+                                     },
+                                     {
+                                     "description": "Homemaker",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "118"
+                                     },
+                                     {
+                                     "description": "Retired",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "120"
+                                     },
+                                     {
+                                     "description": "Volunteer",
+                                     "type": "choices",
+                                     "value": "10",
+                                     "sort_order": "122"
+                                     },
+                                     {
+                                     "description": "Unemployed",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "124"
+                                     },
+                                     {
+                                     "description": "Unable to work due to injury or disability",
+                                     "type": "choices",
+                                     "value": "12",
+                                     "sort_order": "126"
+                                     },
+                                     {
+                                     "description": "Other",
+                                     "type": "choices",
+                                     "value": "8",
+                                     "sort_order": "128"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nonworkType",
+                  "category": {
+                  "description": "Category 1"
+                  },
+                  "type": "txt",
+                  "text": "Describe what you do during a typical day.",
+                  "label": "Typical Day Description",
+                  "tip_text": "",
+                  "display_rules": [
+                                    {
+                                    "property": "work",
+                                    "type": "question",
+                                    "operation": "EQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "workType",
+                  "category": {
+                  "description": "Category 1"
+                  },
+                  "type": "txt",
+                  "text": "What is your job title?",
+                  "label": "Job Title",
+                  "tip_text": "",
+                  "display_rules": [
+                                    {
+                                    "property": "work",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "workHrsWeek",
+                  "category": {
+                  "description": "Category 1"
+                  },
+                  "type": "rb",
+                  "text": "How many hours a week do you work?",
+                  "label": "Hours of Work per Week",
+                  "tip_text": "Long work hours may reduce your available time for exercise and relaxation.",
+                  "answer_options": [
+                                     {
+                                     "description": "10 or fewer hrs",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "138"
+                                     },
+                                     {
+                                     "description": "11 to 20 hrs",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "140"
+                                     },
+                                     {
+                                     "description": "21 to 30 hrs",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "142"
+                                     },
+                                     {
+                                     "description": "31 to 40 hrs",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "144"
+                                     },
+                                     {
+                                     "description": "41 to 50 hrs",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "146"
+                                     },
+                                     {
+                                     "description": "More than 50 hrs",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "148"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "work",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "workHrsCommute",
+                  "category": {
+                  "description": "Category 1"
+                  },
+                  "type": "rb",
+                  "text": "How long does it take you to drive to work?",
+                  "label": "Commute Time",
+                  "tip_text": "Long commute patterns may reduce your available time for exercise and relaxation.",
+                  "answer_options": [
+                                     {
+                                     "description": "15 or fewer min",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "154"
+                                     },
+                                     {
+                                     "description": "16 to 30 min",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "156"
+                                     },
+                                     {
+                                     "description": "31 min to 1 hr",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "158"
+                                     },
+                                     {
+                                     "description": "More than 1 hr",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "160"
+                                     },
+                                     {
+                                     "description": "Walk, bike or take public transport",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "162"
+                                     },
+                                     {
+                                     "description": "Work from home",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "164"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "work",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "workTravel",
+                  "category": {
+                  "description": "Category 1"
+                  },
+                  "type": "rb",
+                  "text": "How many days do you spend in transit for work based travel each year?",
+                  "label": "Time Travelling for Work",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "Not applicable / None",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "170"
+                                     },
+                                     {
+                                     "description": "Less than 5 days a year",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "172"
+                                     },
+                                     {
+                                     "description": "5-15 days a year",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "174"
+                                     },
+                                     {
+                                     "description": "16-30 days a year",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "176"
+                                     },
+                                     {
+                                     "description": "More than 30 days a year",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "178"
+                                     },
+                                     {
+                                     "description": "Unknown",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "180"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "work",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "hist",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "ch",
+                  "text": "Have you ever been diagnosed with:",
+                  "label": "Diagnosed Conditions",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "High Blood Pressure/ Hypertension",
+                                     "type": "choices",
+                                     "value": "histBP",
+                                     "sort_order": "185"
+                                     },
+                                     {
+                                     "description": "Diabetes",
+                                     "type": "choices",
+                                     "value": "histDiab",
+                                     "sort_order": "187"
+                                     },
+                                     {
+                                     "description": "Abnormal Cholesterol/ Hyperlipidemia",
+                                     "type": "choices",
+                                     "value": "histChol",
+                                     "sort_order": "189"
+                                     },
+                                     {
+                                     "description": "CAD (Coronary Artery Disease)/ Heart Attack/ Angina/ Blockage/ Calcification/ Ischemic Stress Test",
+                                     "type": "choices",
+                                     "value": "histCorAD",
+                                     "sort_order": "191"
+                                     },
+                                     {
+                                     "description": "Stroke / Transient Ischemic Attack (TIA) - A transient ischemic attack or TIA, often referred to as a 'mini stroke' is caused by the changes in the blood supply to a particular area of the brain, resulting in brief neurologic dysfunction that persists for",
+                                     "type": "choices",
+                                     "value": "histStroke",
+                                     "sort_order": "193"
+                                     },
+                                     {
+                                     "description": "Peripheral Vascular/Arterial Disease (PVD or PAD) - Peripheral Vascular/Arterial  Disease refers to blockages that can occur in the arteries that carry blood to the arms and legs.  It is the obstruction of large arteries not within the coronary, aortic ar",
+                                     "type": "choices",
+                                     "value": "histPerVD",
+                                     "sort_order": "195"
+                                     },
+                                     {
+                                     "description": "Cerebrovascular or Carotid Artery Disease - Cerebrovascular Disease is a disease affecting any artery supplying blood to the brain; may cause blockage or rupture of a blood vessel, leading to a stroke.  Carotid Artery Disease is a progressive disease that",
+                                     "type": "choices",
+                                     "value": "histCerVD",
+                                     "sort_order": "197"
+                                     },
+                                     {
+                                     "description": "Congestive Heart Failure - A condition in which the heart fails to pump an adequate supply of blood to the body tissues, often resulting in fluid accumulation in the lungs and/or lower extremities.",
+                                     "type": "choices",
+                                     "value": "histHrtFail",
+                                     "sort_order": "199"
+                                     },
+                                     {
+                                     "description": "None of these",
+                                     "type": "choices",
+                                     "value": "none",
+                                     "sort_order": "201"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "histActions",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "rb",
+                  "text": "What actions are you currently taking to control your diagnosed condition(s)?",
+                  "label": "Medical Condition Actions",
+                  "tip_text": "Lifestyle changes you might have made in order to control your condition may include changes to your normal diet, changes to your exercise regimen, or changing your exposure to stress.",
+                  "answer_options": [
+                                     {
+                                     "description": "Taking medication(s)",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "207"
+                                     },
+                                     {
+                                     "description": "Lifestyle changes",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "209"
+                                     },
+                                     {
+                                     "description": "Taking medication(s) + Lifestyle changes",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "211"
+                                     },
+                                     {
+                                     "description": "No action",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "213"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "hist",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "histStressTest",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "rb",
+                  "text": "What were the results of your most recent stress test, if any?",
+                  "label": "Had a Stress Test",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "I've never had a stress test",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "219"
+                                     },
+                                     {
+                                     "description": "I don't remember having a stress test",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "221"
+                                     },
+                                     {
+                                     "description": "I've had a stress test but don't know the results",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "223"
+                                     },
+                                     {
+                                     "description": "My stress test result was normal (did NOT indicate blockage)",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "225"
+                                     },
+                                     {
+                                     "description": "My stress test was abnormal (indicated blockage)",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "227"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "histStressTestDescr",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "txt",
+                  "text": "What was the year of and the reason for the stress test?",
+                  "label": "E.g. Routine, chest pain, other.",
+                  "tip_text": "Understanding why your doctor felt it was necessary to conduct the test, including the symptoms that led to the evaluation can help with heart health recommendations.",
+                  "display_rules": [
+                                    {
+                                    "property": "histStressTest",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "3"
+                                    },
+                                    {
+                                    "property": "histStressTest",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "4"
+                                    },
+                                    {
+                                    "property": "histStressTest",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "5"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "histHrtEvent",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "diary",
+                  "text": "What, if any, heart related event or procedure(s) have you had?",
+                  "label": "Heart Event Diary",
+                  "tip_text": "",
+                  "display_rules": [
+                                    {
+                                    "property": "histCorAD",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    },
+                                    {
+                                    "property": "histStroke",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    },
+                                    {
+                                    "property": "histPerVD",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    },
+                                    {
+                                    "property": "histCerVD",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    },
+                                    {
+                                    "property": "histCarAD",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    },
+                                    {
+                                    "property": "histHrtFail",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    },
+                                    {
+                                    "property": "histStressTest",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "3"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "personalHistDesc",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "txt",
+                  "text": "Please describe your medical history.",
+                  "label": "Personal History Description",
+                  "tip_text": ""
+                  },
+                  {
+                  "abbreviation": "histMeds",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "diary",
+                  "text": "What medications do you take on a regular basis?",
+                  "label": "Medication Diary",
+                  "tip_text": ""
+                  },
+                  {
+                  "abbreviation": "medCompliance",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "rb",
+                  "text": "Do you take your prescribed medication regularly?",
+                  "label": "Medication Compliance",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "Miss almost everyday",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "241"
+                                     },
+                                     {
+                                     "description": "Miss 3 times/week",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "243"
+                                     },
+                                     {
+                                     "description": "Miss 2 times/week",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "245"
+                                     },
+                                     {
+                                     "description": "Miss once a week",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "247"
+                                     },
+                                     {
+                                     "description": "Almost never miss",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "249"
+                                     },
+                                     {
+                                     "description": "Not applicable",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "251"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "histMeds",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "medAllergiesYN",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "rb",
+                  "text": "Do you have any allergies or reactions to medication?",
+                  "label": "Allergy to Medication",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "Yes",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "257"
+                                     },
+                                     {
+                                     "description": "No Known Drug Allergies",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "259"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "medAllergies",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "txt",
+                  "text": "Describe your allergies/reactions and indicate which medication(s) trigger them:",
+                  "label": "Med Allergy Description",
+                  "tip_text": "This question is to ensure participant safety.",
+                  "display_rules": [
+                                    {
+                                    "property": "medAllergiesYN",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "menopause",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "rb",
+                  "text": "Have you experienced menopause?",
+                  "label": "Menopause",
+                  "tip_text": "The onset of menopause increases the risk for heart disease. ",
+                  "answer_options": [
+                                     {
+                                     "description": "Yes",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "267"
+                                     },
+                                     {
+                                     "description": "No",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "269"
+                                     },
+                                     {
+                                     "description": "Undetermined",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "271"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "gender",
+                                    "type": "????",
+                                    "operation": "NEQ",
+                                    "value": "2"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "famHist",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "ch",
+                  "text": "Has a biological parent, sibling or child ever been diagnosed with:",
+                  "label": "Diagnosed Family Conditions",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "High Blood Pressure/Hypertension",
+                                     "type": "choices",
+                                     "value": "famHistBP",
+                                     "sort_order": "277"
+                                     },
+                                     {
+                                     "description": "Diabetes",
+                                     "type": "choices",
+                                     "value": "famHistDiab",
+                                     "sort_order": "279"
+                                     },
+                                     {
+                                     "description": "Abnormal Cholesterol/Hyperlipidemia",
+                                     "type": "choices",
+                                     "value": "famHistChol",
+                                     "sort_order": "281"
+                                     },
+                                     {
+                                     "description": "Early heart disease - before 55 men or 65 women (i.e. Coronary Artery Disease/ Heart Attack/ Angina/ Blockage/ Calcification/ Angioplasty/ Stent/ Procedure/ Bypass)",
+                                     "type": "choices",
+                                     "value": "famHistCorAD",
+                                     "sort_order": "283"
+                                     },
+                                     {
+                                     "description": "Stroke/ Transient Ischemic Attack (TIA) - A transient ischemic attack or TIA, often referred to as a 'mini stroke' is caused by the changes in the blood supply to a particular area of the brain, resulting in brief neurologic dysfunction that persists for ",
+                                     "type": "choices",
+                                     "value": "famHistStroke",
+                                     "sort_order": "285"
+                                     },
+                                     {
+                                     "description": "Peripheral Vascular/Arterial Disease (PVD or PAD) - Peripheral Vascular/Arterial  Disease refers to blockages that can occur in the arteries that carry blood to the arms and legs.  It is the obstruction of large arteries not within the coronary, aortic ar",
+                                     "type": "choices",
+                                     "value": "famHistPerVD",
+                                     "sort_order": "287"
+                                     },
+                                     {
+                                     "description": "Cerebrovascular or Carotid Artery Disease - Cerebrovascular Disease is a disease affecting any artery supplying blood to the brain; may cause blockage or rupture of a blood vessel, leading to a stroke.  Carotid Artery Disease is a progressive disease that",
+                                     "type": "choices",
+                                     "value": "famHistCerVD",
+                                     "sort_order": "289"
+                                     },
+                                     {
+                                     "description": "Congestive Heart Failure - A condition in which the heart fails to pump an adequate supply of blood to the body tissues, often resulting in fluid accumulation in the lungs and/or lower extremities.",
+                                     "type": "choices",
+                                     "value": "famHistHrtFail",
+                                     "sort_order": "291"
+                                     },
+                                     {
+                                     "description": "None, no one in my family has suffered from any of these",
+                                     "type": "choices",
+                                     "value": "none",
+                                     "sort_order": "293"
+                                     },
+                                     {
+                                     "description": "Not sure",
+                                     "type": "choices",
+                                     "value": "dk",
+                                     "sort_order": "295"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "famHistDesc",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "txt",
+                  "text": "Please describe your family's medical history.",
+                  "label": "Family History Description",
+                  "tip_text": ""
+                  },
+                  {
+                  "abbreviation": "smokeStatus",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "rb",
+                  "text": "Do you currently or have ever smoked on a regular basis?",
+                  "label": "Smoker",
+                  "tip_text": "Use of tobacco products such as cigarettes, cigars, pipes, hookah, beetle leaves (paan) with tobacco or nicorette gum, is a significant risk factor for heart disease and heart attacks. The discontinuation of tobacco products is accompanied by a rapid and ",
+                  "answer_options": [
+                                     {
+                                     "description": "Never smoked",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "678"
+                                     },
+                                     {
+                                     "description": "Formerly (quit over 2 years ago)",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "680"
+                                     },
+                                     {
+                                     "description": "Formerly (quit within past 2 years)",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "682"
+                                     },
+                                     {
+                                     "description": "Rarely (a few times a month)",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "684"
+                                     },
+                                     {
+                                     "description": "Sometimes (a few times a week)",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "686"
+                                     },
+                                     {
+                                     "description": "Daily",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "688"
+                                     },
+                                     {
+                                     "description": "Not assessed",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "999"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "smokeNumCig",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "rb",
+                  "text": "How many cigarettes do/did you smoke in a typical day?",
+                  "label": "There are approximately 20 cigarettes in a pack",
+                  "tip_text": "Cigarettes per day",
+                  "answer_options": [
+                                     {
+                                     "description": "1-5 cigarettes a day",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "693"
+                                     },
+                                     {
+                                     "description": "6-19 cigarettes a day",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "694"
+                                     },
+                                     {
+                                     "description": "20+, a pack or more a day",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "695"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "smokeStatus",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "6"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "smokeAgeStart",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "rb",
+                  "text": "At what age did you start smoking cigarettes?",
+                  "label": "Age Started Smoking",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "Before 15",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "700"
+                                     },
+                                     {
+                                     "description": "15-19 years",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "702"
+                                     },
+                                     {
+                                     "description": "20-24 years",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "704"
+                                     },
+                                     {
+                                     "description": "25-29 years",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "706"
+                                     },
+                                     {
+                                     "description": "30-34 years",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "708"
+                                     },
+                                     {
+                                     "description": "35-39 years",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "710"
+                                     },
+                                     {
+                                     "description": "40-44 years",
+                                     "type": "choices",
+                                     "value": "7",
+                                     "sort_order": "712"
+                                     },
+                                     {
+                                     "description": "45-49 years",
+                                     "type": "choices",
+                                     "value": "8",
+                                     "sort_order": "714"
+                                     },
+                                     {
+                                     "description": "50-69 years",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "716"
+                                     },
+                                     {
+                                     "description": "70 or older",
+                                     "type": "choices",
+                                     "value": "13",
+                                     "sort_order": "718"
+                                     },
+                                     {
+                                     "description": "Don't know",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "720"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "smokeStatus",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "2"
+                                    },
+                                    {
+                                    "property": "smokeStatus",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "3"
+                                    },
+                                    {
+                                    "property": "smokeStatus",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "4"
+                                    },
+                                    {
+                                    "property": "smokeStatus",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "5"
+                                    },
+                                    {
+                                    "property": "smokeStatus",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "6"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "smokeAgeQuit",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "rb",
+                  "text": "At what age did you quit smoking cigarettes?",
+                  "label": "Age Quit Smoking",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "Before 15",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "726"
+                                     },
+                                     {
+                                     "description": "15-19 years",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "728"
+                                     },
+                                     {
+                                     "description": "20-24 years",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "730"
+                                     },
+                                     {
+                                     "description": "25-29 years",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "732"
+                                     },
+                                     {
+                                     "description": "30-34 years",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "734"
+                                     },
+                                     {
+                                     "description": "35-39 years",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "736"
+                                     },
+                                     {
+                                     "description": "40-44 years",
+                                     "type": "choices",
+                                     "value": "7",
+                                     "sort_order": "738"
+                                     },
+                                     {
+                                     "description": "45-49 years",
+                                     "type": "choices",
+                                     "value": "8",
+                                     "sort_order": "740"
+                                     },
+                                     {
+                                     "description": "50-54 years",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "742"
+                                     },
+                                     {
+                                     "description": "55-59 years",
+                                     "type": "choices",
+                                     "value": "10",
+                                     "sort_order": "744"
+                                     },
+                                     {
+                                     "description": "60-64 years",
+                                     "type": "choices",
+                                     "value": "11",
+                                     "sort_order": "746"
+                                     },
+                                     {
+                                     "description": "65-69 years",
+                                     "type": "choices",
+                                     "value": "12",
+                                     "sort_order": "748"
+                                     },
+                                     {
+                                     "description": "70-74 years",
+                                     "type": "choices",
+                                     "value": "13",
+                                     "sort_order": "750"
+                                     },
+                                     {
+                                     "description": "75 or older",
+                                     "type": "choices",
+                                     "value": "14",
+                                     "sort_order": "752"
+                                     },
+                                     {
+                                     "description": "Don't know",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "754"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "smokeStatus",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "2"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "smokeHelpQuit",
+                  "category": {
+                  "description": "Category 2"
+                  },
+                  "type": "rb",
+                  "text": "Would you like help trying to quit smoking? ",
+                  "label": "Would Like Help to Quit Smoking",
+                  "tip_text": "Research has shown that within six months of quitting smoking, your risk for heart disease falls by 50%.",
+                  "answer_options": [
+                                     {
+                                     "description": "Yes",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "760"
+                                     },
+                                     {
+                                     "description": "No",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "762"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "smokeStatus",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "4"
+                                    },
+                                    {
+                                    "property": "smokeStatus",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "5"
+                                    },
+                                    {
+                                    "property": "smokeStatus",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "6"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "stressLevel",
+                  "category": {
+                  "description": "Category 3"
+                  },
+                  "type": "rb",
+                  "text": "Are you currently under stress?",
+                  "label": "Stress Level",
+                  "tip_text": "Stress is associated with increased risk of high blood pressure, obesity, diabetes, and heart disease.",
+                  "answer_options": [
+                                     {
+                                     "description": "1 - Not at all stressed",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "303"
+                                     },
+                                     {
+                                     "description": "2 - Slightly stressed",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "305"
+                                     },
+                                     {
+                                     "description": "3 - Moderately stressed",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "307"
+                                     },
+                                     {
+                                     "description": "4 - Very stressed",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "309"
+                                     },
+                                     {
+                                     "description": "5 - Extremely stressed",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "311"
+                                     },
+                                     {
+                                     "description": "Not assesed",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "312"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "contentLevel",
+                  "category": {
+                  "description": "Category 3"
+                  },
+                  "type": "rb",
+                  "text": "How content are you currently?",
+                  "label": "Contentment Level",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "1 - Not at all content",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "317"
+                                     },
+                                     {
+                                     "description": "2 - Slightly content",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "319"
+                                     },
+                                     {
+                                     "description": "3 - Moderately content",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "321"
+                                     },
+                                     {
+                                     "description": "4 - Very content",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "323"
+                                     },
+                                     {
+                                     "description": "5 - Extremely content",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "325"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "stressReducActivities",
+                  "category": {
+                  "description": "Category 3"
+                  },
+                  "type": "rb",
+                  "text": "Do you engage in any stress reduction activities such as yoga, stretching with the purpose of relaxation, etc.?",
+                  "label": "Relaxation Activity",
+                  "tip_text": "Personal autonomy can reduce the risk of heart disease.",
+                  "answer_options": [
+                                     {
+                                     "description": "Yes",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "331"
+                                     },
+                                     {
+                                     "description": "No",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "333"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "stressReducPerWeek",
+                  "category": {
+                  "description": "Category 3"
+                  },
+                  "type": "rb",
+                  "text": "How many times a week do you engage in this stress reduction activity?",
+                  "label": "Frequency of Relaxation Activity",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "6-7 times",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "339"
+                                     },
+                                     {
+                                     "description": "4-5 times",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "341"
+                                     },
+                                     {
+                                     "description": "3 times",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "343"
+                                     },
+                                     {
+                                     "description": "1-2 times",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "345"
+                                     },
+                                     {
+                                     "description": "No routine",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "347"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "stressReducActivities",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "meditation",
+                  "category": {
+                  "description": "Category 3"
+                  },
+                  "type": "rb",
+                  "text": "Do you practice meditation?",
+                  "label": "Meditation",
+                  "tip_text": "Samadhi is a profound state of restful alertness associated with decreased heart disease, insulin resistance, and high blood-pressure. Transcendental meditation is an easy technique to bring about this state.",
+                  "answer_options": [
+                                     {
+                                     "description": "Yes",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "354"
+                                     },
+                                     {
+                                     "description": "No",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "356"
+                                     },
+                                     {
+                                     "description": "Not assessed",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "999"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "meditationType",
+                  "category": {
+                  "description": "Category 3"
+                  },
+                  "type": "rb",
+                  "text": "What type of meditation do you practice?",
+                  "label": "Meditation Type",
+                  "tip_text": "Certain types of meditation techniques have been studied extensively and their health benefit has been scientifically documented. Transcendental Meditation has been the focus of numerous such studies.",
+                  "answer_options": [
+                                     {
+                                     "description": "Concentration",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "362"
+                                     },
+                                     {
+                                     "description": "Contemplation",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "364"
+                                     },
+                                     {
+                                     "description": "Transcendental",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "366"
+                                     },
+                                     {
+                                     "description": "Mindfulness",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "368"
+                                     },
+                                     {
+                                     "description": "Pranayam",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "370"
+                                     },
+                                     {
+                                     "description": "Other",
+                                     "type": "choices",
+                                     "value": "10",
+                                     "sort_order": "372"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "meditation",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "meditationDesc",
+                  "category": {
+                  "description": "Category 3"
+                  },
+                  "type": "txt",
+                  "text": "Please describe the type of meditation you practice.",
+                  "label": "Meditation Description",
+                  "tip_text": "",
+                  "display_rules": [
+                                    {
+                                    "property": "meditation",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "meditationPerWeekTimes",
+                  "category": {
+                  "description": "Category 3"
+                  },
+                  "type": "int",
+                  "text": "How many times per week do you practice meditation?",
+                  "label": "Meditation Frequency",
+                  "tip_text": "times per week",
+                  "display_rules": [
+                                    {
+                                    "property": "meditation",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "meditationPerTimeMin",
+                  "category": {
+                  "description": "Category 3"
+                  },
+                  "type": "int",
+                  "text": "How many minutes per day do you practice meditation?",
+                  "label": "Meditation Minutes",
+                  "tip_text": "minutes",
+                  "display_rules": [
+                                    {
+                                    "property": "meditation",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "physExDays",
+                  "category": {
+                  "description": "Category 4"
+                  },
+                  "type": "rb",
+                  "text": "Are you currently (in the last month) physically active?",
+                  "label": "Regularity of Physical Activity",
+                  "tip_text": "Individuals are physically active if they are regularly involved in moderate or strenuous exercise for at least 150 minutes or more a week.",
+                  "answer_options": [
+                                     {
+                                     "description": "No",
+                                     "type": "choices",
+                                     "value": "8",
+                                     "sort_order": "388"
+                                     },
+                                     {
+                                     "description": "1 day per week",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "390"
+                                     },
+                                     {
+                                     "description": "2 days per week",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "392"
+                                     },
+                                     {
+                                     "description": "3 days per week",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "394"
+                                     },
+                                     {
+                                     "description": "4 days per week",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "396"
+                                     },
+                                     {
+                                     "description": "5 days per week",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "398"
+                                     },
+                                     {
+                                     "description": "6 days per week",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "400"
+                                     },
+                                     {
+                                     "description": "7 days per week",
+                                     "type": "choices",
+                                     "value": "7",
+                                     "sort_order": "402"
+                                     },
+                                     {
+                                     "description": "Not assessed",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "999"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "physExLngthMin",
+                  "category": {
+                  "description": "Category 4"
+                  },
+                  "type": "int",
+                  "text": "For what amount of time are you physically active during the day?",
+                  "label": "Physical Activity Minutes",
+                  "tip_text": "minutes",
+                  "display_rules": [
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "2"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "3"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "4"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "5"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "6"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "7"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "2"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "3"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "4"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "5"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "6"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "7"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "physDesc",
+                  "category": {
+                  "description": "Category 4"
+                  },
+                  "type": "txt",
+                  "text": "List/describe the physical activities that you do regularly.",
+                  "label": "Physical Activity Detail",
+                  "tip_text": "",
+                  "display_rules": [
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "2"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "3"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "4"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "5"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "6"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "7"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "physMaxEffort",
+                  "category": {
+                  "description": "Category 4"
+                  },
+                  "type": "rb",
+                  "text": "How often do you perform these physical activities to your maximal level of effort?",
+                  "label": "Maximal Effort during Physical Activity",
+                  "tip_text": "Amount of exercise is more important than intensity of exercise, but intensity remains important. The intensity of exercise achievable or recommended is dependent on your body type, age and personal medical history.",
+                  "answer_options": [
+                                     {
+                                     "description": "Always",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "414"
+                                     },
+                                     {
+                                     "description": "Most times",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "416"
+                                     },
+                                     {
+                                     "description": "Sometimes",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "418"
+                                     },
+                                     {
+                                     "description": "Never",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "420"
+                                     },
+                                     {
+                                     "description": "Not applicable",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "422"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "2"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "3"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "4"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "5"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "6"
+                                    },
+                                    {
+                                    "property": "physExDays",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "7"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "timeSit",
+                  "category": {
+                  "description": "Category 4"
+                  },
+                  "type": "rb",
+                  "text": "How long do you just sit without a break, on a regular basis?",
+                  "label": "Time Spent Just Sitting",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "I do not just sit for extended period of time",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "428"
+                                     },
+                                     {
+                                     "description": "I do sit, but for fewer than 3 hours without a break",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "430"
+                                     },
+                                     {
+                                     "description": "I do sit, and for 3 hours or longer without a break",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "432"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrVegetarian",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "Are you vegetarian?",
+                  "label": "Vegetarian",
+                  "tip_text": "There is a popular belief that being vegetarian is cardio protective among South Asians. However, not all vegetarian diets are the same. Diet plays an important role in the prevention as well as development of heart disease. ",
+                  "answer_options": [
+                                     {
+                                     "description": "No, I eat meat and/or fish",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "438"
+                                     },
+                                     {
+                                     "description": "Yes, ovo",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "440"
+                                     },
+                                     {
+                                     "description": "Yes, lacto",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "442"
+                                     },
+                                     {
+                                     "description": "Yes, lacto-ovo",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "444"
+                                     },
+                                     {
+                                     "description": "Yes, vegan",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "446"
+                                     },
+                                     {
+                                     "description": "Yes, jain",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "448"
+                                     },
+                                     {
+                                     "description": "Yes, other",
+                                     "type": "choices",
+                                     "value": "7",
+                                     "sort_order": "450"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrVegNum",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "How many servings of vegetables do you eat on an average each day?",
+                  "label": "Vegetables per day",
+                  "tip_text": "Research indicates that 5-9 daily servings of fruits and vegetables significantly decreases cardiac and cancer related morbidity and mortality.",
+                  "answer_options": [
+                                     {
+                                     "description": "None",
+                                     "type": "choices",
+                                     "value": "8",
+                                     "sort_order": "456"
+                                     },
+                                     {
+                                     "description": "1 serving",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "458"
+                                     },
+                                     {
+                                     "description": "2 servings",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "460"
+                                     },
+                                     {
+                                     "description": "3 servings",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "462"
+                                     },
+                                     {
+                                     "description": "4 servings",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "464"
+                                     },
+                                     {
+                                     "description": "5 servings",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "466"
+                                     },
+                                     {
+                                     "description": "6 or more",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "468"
+                                     },
+                                     {
+                                     "description": "Not sure",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "470"
+                                     },
+                                     {
+                                     "description": "Not assessed",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "999"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrVegDark",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "How many of your vegetable servings come from yellow/orange or dark green/leafy vegetables?",
+                  "label": "Colored Vegetables per day",
+                  "tip_text": "Research indicates that vegetables that grow on vines such as squashes, beans, okra, and greens such as spinach, collards, swiss chard, purslane have significant effects on longevity and cardiac health. These effects have not been found to be associated w",
+                  "answer_options": [
+                                     {
+                                     "description": "None",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "476"
+                                     },
+                                     {
+                                     "description": "1-2 servings",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "478"
+                                     },
+                                     {
+                                     "description": "3 servings",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "480"
+                                     },
+                                     {
+                                     "description": "4 or more servings",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "482"
+                                     },
+                                     {
+                                     "description": "Not sure",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "484"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "nutrVegNum",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "1"
+                                    },
+                                    {
+                                    "property": "nutrVegNum",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "2"
+                                    },
+                                    {
+                                    "property": "nutrVegNum",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "3"
+                                    },
+                                    {
+                                    "property": "nutrVegNum",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "4"
+                                    },
+                                    {
+                                    "property": "nutrVegNum",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "5"
+                                    },
+                                    {
+                                    "property": "nutrVegNum",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "6"
+                                    },
+                                    {
+                                    "property": "nutrVegNum",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "9"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "nutrFruitNum",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "How many servings of fruit do you eat on an average each day?",
+                  "label": "Fruit per day",
+                  "tip_text": "Research indicates that 5-9 daily servings of fruits and vegetables significantly decreases cardiac and cancer related morbidity and mortality.",
+                  "answer_options": [
+                                     {
+                                     "description": "None",
+                                     "type": "choices",
+                                     "value": "8",
+                                     "sort_order": "490"
+                                     },
+                                     {
+                                     "description": "1 serving",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "492"
+                                     },
+                                     {
+                                     "description": "2 servings",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "494"
+                                     },
+                                     {
+                                     "description": "3 servings",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "496"
+                                     },
+                                     {
+                                     "description": "4 servings",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "498"
+                                     },
+                                     {
+                                     "description": "5 servings",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "500"
+                                     },
+                                     {
+                                     "description": "6 or more",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "502"
+                                     },
+                                     {
+                                     "description": "Not sure",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "504"
+                                     },
+                                     {
+                                     "description": "Not assessed",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "999"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrGrain",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "On average, how many total servings of grain products do you eat each day?",
+                  "label": "Grain Servings per day",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "None",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "510"
+                                     },
+                                     {
+                                     "description": "1-2 servings",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "512"
+                                     },
+                                     {
+                                     "description": "3 servings",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "514"
+                                     },
+                                     {
+                                     "description": "4 or more servings",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "516"
+                                     },
+                                     {
+                                     "description": "Not sure",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "518"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrGrainWhole",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "Of the servings of grain above, how many are servings of whole grain products?",
+                  "label": "Whole Grain Servings per day",
+                  "tip_text": "Whole grain products increase dietary fiber and have been shown to decrease risk of heart disease, diabetes and cancer. Whole grain products include whole wheat, whole rye, oats, oatmeal, bulgur, cracked wheat, popcorn, barley, and brown rice.",
+                  "answer_options": [
+                                     {
+                                     "description": "None",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "524"
+                                     },
+                                     {
+                                     "description": "1-2 servings",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "526"
+                                     },
+                                     {
+                                     "description": "3 servings",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "528"
+                                     },
+                                     {
+                                     "description": "4 or more servings",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "530"
+                                     },
+                                     {
+                                     "description": "Not sure",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "532"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "nutrGrain",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "2"
+                                    },
+                                    {
+                                    "property": "nutrGrain",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "3"
+                                    },
+                                    {
+                                    "property": "nutrGrain",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "4"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "nutrBreadWhite",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "On average, how many servings of white bread (not whole wheat) do you eat each week?",
+                  "label": "White Bread Servings per week",
+                  "tip_text": "White bread has been associated with the development of diabetes. It should be limited or avoided. This includes sourdough, french bread, croissants, or any bread made with all-purpose flour. Enriched bread is white bread with vitamins added, and is not n",
+                  "answer_options": [
+                                     {
+                                     "description": "None",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "538"
+                                     },
+                                     {
+                                     "description": "1-2 servings per week",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "540"
+                                     },
+                                     {
+                                     "description": "3-6 servings per week",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "542"
+                                     },
+                                     {
+                                     "description": "Once daily (7-8/week)",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "544"
+                                     },
+                                     {
+                                     "description": "Multiple times daily (8+/week)",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "546"
+                                     },
+                                     {
+                                     "description": "Not sure",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "548"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "nutrGrain",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "2"
+                                    },
+                                    {
+                                    "property": "nutrGrain",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "3"
+                                    },
+                                    {
+                                    "property": "nutrGrain",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "4"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "nutrVegGrain",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "Does your daily diet contain more vegetables or more grain?",
+                  "label": "Vegetable or Grain Based Diet",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "Vegetables",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "554"
+                                     },
+                                     {
+                                     "description": "Grain",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "556"
+                                     },
+                                     {
+                                     "description": "Equal servings of vegetables and grains",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "558"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrFish",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "Do you consume fish, or take fish-oil/omega-3 oil supplements on a regular basis?",
+                  "label": "Fish or Omega 3 Oils",
+                  "tip_text": "Research shows strong evidence that the omega-3s EPA�and DHA can boost heart health and lower triglycerides. Flaxseed is the source of only one of the 3 essential omega-3 and has been shown to provide no particular CV benefit. Therefore not to be recorded",
+                  "answer_options": [
+                                     {
+                                     "description": "Neither",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "564"
+                                     },
+                                     {
+                                     "description": "< 2 fish servings/week and < 1 gram oil/day",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "566"
+                                     },
+                                     {
+                                     "description": ">= 2 fish servings/week and/or >= 1 gram oil/day",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "568"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrNuts",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "Do you consume nuts on a daily basis?",
+                  "label": "Nut Consumption",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "I do not consume nuts on a regular/daily basis",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "574"
+                                     },
+                                     {
+                                     "description": "Fewer than 12 pieces",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "576"
+                                     },
+                                     {
+                                     "description": "12 or more pieces",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "578"
+                                     },
+                                     {
+                                     "description": "Not assessed",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "999"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrSatFat",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "How many servings of foods that are high in saturated fat or trans-fats do you eat on an average each week?",
+                  "label": "Sat/Trans Fat Servings per week",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "None",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "584"
+                                     },
+                                     {
+                                     "description": "1-2 servings per week",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "586"
+                                     },
+                                     {
+                                     "description": "3-6 servings per week",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "588"
+                                     },
+                                     {
+                                     "description": "Once daily (7-8 per week)",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "590"
+                                     },
+                                     {
+                                     "description": "Multiple times daily (8+ per week)",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "592"
+                                     },
+                                     {
+                                     "description": "Not sure",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "594"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrSweets",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "How many servings of high calorie sweet foods do you eat on an average each week?",
+                  "label": "Sweet Food Servings per week",
+                  "tip_text": "Sweet foods usually have both high carbohydrate content (cakes, donuts, chocolate, Indian sweets) as well as high saturated fat content (indian sweets, ice-cream).",
+                  "answer_options": [
+                                     {
+                                     "description": "None",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "600"
+                                     },
+                                     {
+                                     "description": "1-2 servings per week",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "602"
+                                     },
+                                     {
+                                     "description": "3-6 servings per week",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "604"
+                                     },
+                                     {
+                                     "description": "Once daily (7-8 per week)",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "606"
+                                     },
+                                     {
+                                     "description": "Multiple times daily (8+ per week)",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "608"
+                                     },
+                                     {
+                                     "description": "Not sure",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "610"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrDrinkSugar",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "How many servings of fruit juice or sweetened drinks do you drink on an average each week?",
+                  "label": "Juice/Sweet Drinks per week",
+                  "tip_text": "Fruit and vegetable juice are a concentrated form of sugar with the highest glycemic index and should be avoided.  Have whole fruits or vegetables instead.  Other common sugar sweetened beverages include sodas, sports drinksand sugar sweetened coffee and ",
+                  "answer_options": [
+                                     {
+                                     "description": "None",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "616"
+                                     },
+                                     {
+                                     "description": "1-2 servings per week",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "618"
+                                     },
+                                     {
+                                     "description": "3-6 servings per week",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "620"
+                                     },
+                                     {
+                                     "description": "Once daily (7-8 per week)",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "622"
+                                     },
+                                     {
+                                     "description": "Multiple times daily (8+ per week)",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "624"
+                                     },
+                                     {
+                                     "description": "Not sure",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "626"
+                                     },
+                                     {
+                                     "description": "Not assessed",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "999"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrSnack",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "How often do you eat (meals or snacks) due to reasons other than hunger?",
+                  "label": "Non-hunger Snacking",
+                  "tip_text": "Eating for entertainment, stress, or boredom can lead to unhealthy weight gain.",
+                  "answer_options": [
+                                     {
+                                     "description": "Never",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "632"
+                                     },
+                                     {
+                                     "description": "Once/week",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "634"
+                                     },
+                                     {
+                                     "description": "2 times a week",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "636"
+                                     },
+                                     {
+                                     "description": "3 times a week",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "638"
+                                     },
+                                     {
+                                     "description": "4 times a week",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "640"
+                                     },
+                                     {
+                                     "description": "More than 4 times a week",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "642"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrBreakfast",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "How many days a week do you eat breakfast?",
+                  "label": "Breakfasts per week",
+                  "tip_text": "Daily breakfast is associated with lower BMI (body mass index) and better health.",
+                  "answer_options": [
+                                     {
+                                     "description": "Never",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "648"
+                                     },
+                                     {
+                                     "description": "1-2 Days a week",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "650"
+                                     },
+                                     {
+                                     "description": "3-4 Days a week",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "652"
+                                     },
+                                     {
+                                     "description": "5-6 Days a week",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "654"
+                                     },
+                                     {
+                                     "description": "Daily",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "656"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "nutrDesc",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "txt",
+                  "text": "Describe your specific current diet - South Asian, American, Mixed.",
+                  "label": "Diet Detail/Food Allergies",
+                  "tip_text": "Knowing current dietary habits and restrictions helps in recommending appropriate nutritional modifications to improve heart health."
+                  },
+                  {
+                  "abbreviation": "alcEver",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "Do you currently consume or have you ever consumed alcohol or alcoholic beverages on a regular basis?",
+                  "label": "Alcohol Consumption",
+                  "tip_text": "Limited amount of alcohol consumption is associated with decreased risk of heart disease. However, alcohol may be addictive, and cause other health problems.",
+                  "answer_options": [
+                                     {
+                                     "description": "Never consumed alcohol regularly",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "768"
+                                     },
+                                     {
+                                     "description": "Formerly consumed alcohol regularly",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "770"
+                                     },
+                                     {
+                                     "description": "Rarely consume alcohol (3 times a month or less)",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "772"
+                                     },
+                                     {
+                                     "description": "Sometimes consume alcohol (more than 3 times a month but not daily)",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "774"
+                                     },
+                                     {
+                                     "description": "Consume alcohol daily",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "776"
+                                     },
+                                     {
+                                     "description": "Consume alcohol but no information on frequency (pre 3.0)",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "778"
+                                     },
+                                     {
+                                     "description": "Not assessed",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "999"
+                                     }
+                                     ]
+                  },
+                  {
+                  "abbreviation": "alcNumDrink",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "When you drink alcohol, how many drinks do you have at one time?",
+                  "label": "Alcohol Drinks at One Time",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "1 Drink",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "784"
+                                     },
+                                     {
+                                     "description": "2-3 Drinks",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "786"
+                                     },
+                                     {
+                                     "description": "4 or more Drinks",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "788"
+                                     },
+                                     {
+                                     "description": "Not Applicable",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "790"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "alcEver",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "3"
+                                    },
+                                    {
+                                    "property": "alcEver",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "4"
+                                    },
+                                    {
+                                    "property": "alcEver",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "5"
+                                    },
+                                    {
+                                    "property": "alcEver",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "9"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "alcAgeStart",
+                  "category": {
+                  "description": "Category 5"
+                  },
+                  "type": "rb",
+                  "text": "At what age did you start consuming alcohol?",
+                  "label": "Age Started Drinking Alcohol",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "Before 15",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "795"
+                                     },
+                                     {
+                                     "description": "15-19 years",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "797"
+                                     },
+                                     {
+                                     "description": "20-24 years",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "799"
+                                     },
+                                     {
+                                     "description": "25-29 years",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "801"
+                                     },
+                                     {
+                                     "description": "30-34 years",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "803"
+                                     },
+                                     {
+                                     "description": "35-39 years",
+                                     "type": "choices",
+                                     "value": "6",
+                                     "sort_order": "805"
+                                     },
+                                     {
+                                     "description": "40-44 years",
+                                     "type": "choices",
+                                     "value": "7",
+                                     "sort_order": "807"
+                                     },
+                                     {
+                                     "description": "45-49 years",
+                                     "type": "choices",
+                                     "value": "8",
+                                     "sort_order": "809"
+                                     },
+                                     {
+                                     "description": "50-70 years",
+                                     "type": "choices",
+                                     "value": "9",
+                                     "sort_order": "811"
+                                     },
+                                     {
+                                     "description": "70 or older",
+                                     "type": "choices",
+                                     "value": "13",
+                                     "sort_order": "813"
+                                     },
+                                     {
+                                     "description": "Don't know",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "815"
+                                     }
+                                     ],
+                  "display_rules": [
+                                    {
+                                    "property": "alcEver",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "3"
+                                    },
+                                    {
+                                    "property": "alcEver",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "4"
+                                    },
+                                    {
+                                    "property": "alcEver",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "5"
+                                    },
+                                    {
+                                    "property": "alcEver",
+                                    "type": "question",
+                                    "operation": "NEQ",
+                                    "value": "9"
+                                    }
+                                    ]
+                  },
+                  {
+                  "abbreviation": "averageSleep",
+                  "category": {
+                  "description": "Category 6"
+                  },
+                  "type": "rb",
+                  "text": "On an average, how many hours do you sleep each night?",
+                  "label": "Average Sleep",
+                  "tip_text": "",
+                  "answer_options": [
+                                     {
+                                     "description": "Fewer than 6 hours",
+                                     "type": "choices",
+                                     "value": "1",
+                                     "sort_order": "664"
+                                     },
+                                     {
+                                     "description": "6-7 hours",
+                                     "type": "choices",
+                                     "value": "2",
+                                     "sort_order": "666"
+                                     },
+                                     {
+                                     "description": "7-8 hours",
+                                     "type": "choices",
+                                     "value": "3",
+                                     "sort_order": "668"
+                                     },
+                                     {
+                                     "description": "8-9 hours",
+                                     "type": "choices",
+                                     "value": "4",
+                                     "sort_order": "670"
+                                     },
+                                     {
+                                     "description": "More than 9 hours",
+                                     "type": "choices",
+                                     "value": "5",
+                                     "sort_order": "672"
+                                     },
+                                     {
+                                     "description": "Not assessed",
+                                     "type": "choices",
+                                     "value": "99",
+                                     "sort_order": "999"
+                                     }
+                                     ]
+                  }
+                  ]
+}

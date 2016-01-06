@@ -17,6 +17,8 @@
 		617397351BED94DA00D477E9 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617397331BED94DA00D477E9 /* Service.swift */; };
 		617397371BED989400D477E9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617397361BED989400D477E9 /* SwiftyJSON.swift */; };
 		617397381BED989400D477E9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617397361BED989400D477E9 /* SwiftyJSON.swift */; };
+		618EA1251C3DCB4400AE2CC1 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 618EA1241C3DCB4400AE2CC1 /* questions.json */; };
+		618EA1271C3DCEDD00AE2CC1 /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 618EA1261C3DCEDD00AE2CC1 /* person.json */; };
 		61C6E1261BF985BD00986FEC /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C6E1251BF985BD00986FEC /* QuestionTableViewController.swift */; };
 		61D3AA731BDDBFBD00BFE544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AA721BDDBFBD00BFE544 /* AppDelegate.swift */; };
 		61D3AA751BDDBFBD00BFE544 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AA741BDDBFBD00BFE544 /* FirstViewController.swift */; };
@@ -49,6 +51,8 @@
 		6173972C1BEC31A400D477E9 /* AnswerChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerChoice.swift; sourceTree = "<group>"; };
 		617397331BED94DA00D477E9 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		617397361BED989400D477E9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		618EA1241C3DCB4400AE2CC1 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		618EA1261C3DCEDD00AE2CC1 /* person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
 		61C6E1251BF985BD00986FEC /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
 		61D3AA6D1BDDBFBD00BFE544 /* SAHC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAHC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D3AA711BDDBFBD00BFE544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				61D3AA7D1BDDBFBD00BFE544 /* LaunchScreen.xib */,
 				61D3AA701BDDBFBD00BFE544 /* Supporting Files */,
 				617397331BED94DA00D477E9 /* Service.swift */,
+				618EA1241C3DCB4400AE2CC1 /* questions.json */,
+				618EA1261C3DCEDD00AE2CC1 /* person.json */,
 			);
 			path = SAHC;
 			sourceTree = "<group>";
@@ -247,7 +253,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				61D3AA7A1BDDBFBD00BFE544 /* Main.storyboard in Resources */,
+				618EA1251C3DCB4400AE2CC1 /* questions.json in Resources */,
 				61D3AA7F1BDDBFBD00BFE544 /* LaunchScreen.xib in Resources */,
+				618EA1271C3DCEDD00AE2CC1 /* person.json in Resources */,
 				61D3AA7C1BDDBFBD00BFE544 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
