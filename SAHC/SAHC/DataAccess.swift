@@ -25,9 +25,9 @@ class DataAccess: NSObject{
         let error: NSErrorPointer = nil
         // Create the Fetch Request
         let fetchRequest = NSFetchRequest(entityName:"Question")
-        let sortDescriptor = NSSortDescriptor(key: "sort_order", ascending: true)
-        let sortDescriptors = [sortDescriptor]
-        fetchRequest.sortDescriptors = sortDescriptors
+        //let sortDescriptor = NSSortDescriptor(key: "sort_order", ascending: true)
+        //let sortDescriptors = [sortDescriptor]
+        //fetchRequest.sortDescriptors = sortDescriptors
         // Execute the Fetch Request
         let results = managedObjectContext.executeFetchRequest(fetchRequest, error: error) as! [Question]
         
@@ -87,7 +87,7 @@ class DataAccess: NSObject{
 /*
 @NSManaged var answer: NSOrderedSet*/
 
-        for index in 0...questions.count-1{
+        for index in 0...questions["questions"].count-1{
             
             var context =  managedObjectContext
             var entity =  NSEntityDescription.entityForName("Question", inManagedObjectContext: context)!
@@ -96,31 +96,36 @@ class DataAccess: NSObject{
             
             var question = Question(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
             
-            question.category = questions[index]["category"]["description"].string!
-            question.helper = questions[index]["helper"].string!
-            question.text = questions[index]["text"].string!
-            question.tip_text = questions[index]["tip_text"].string!
-            question.abbreviation = questions[index]["abbreviation"].string!
-            question.type = questions[index]["type"].string!
-            question.label = questions[index]["label"].string!
+            question.category = questions["questions"][index]["category"]["description"].string!
+            question.abbreviation = questions["questions"][index]["abbreviation"].string!
+            question.type = questions["questions"][index]["type"].string!
+            question.text = questions["questions"][index]["text"].string!
+            question.label = questions["questions"][index]["label"].string!
+            question.tip_text = questions["questions"][index]["tip_text"].string!
+
+/*          question.helper = questions[index]["helper"].string!
             question.sort_order = questions[index]["sort_order"].number!
             question.active = "true" //(questions[index]["active"].string ? "true" : "false")!
-            question.href = questions[index]["href"].string!
+            question.href = questions[index]["href"].string! */
             
             
             var answerChoices:[AnswerChoice] = []
             //var answerChoices = questions[index]["answer_options"]
-            for answerIndex in 0...questions[index]["answer_options"].count - 1{
-            
+            if(questions["questions"][index]["answer_options"].count > 0  ){ //&& index != 11 && index != 22){
+            for answerIndex in 0...questions["questions"][index]["answer_options"].count - 1{
+                if(questions["questions"][index]["answer_options"][answerIndex]["value"].string!.toInt() != nil){
                 var answerChoice = AnswerChoice(entity: answerChoiceEntity, insertIntoManagedObjectContext: managedObjectContext)
-                answerChoice.answer_description = questions[index]["answer_options"][answerIndex]["description"].string!
-                answerChoice.type = questions[index]["answer_options"][answerIndex]["type"].string!
-                //answerChoice.value = NSNumber(integer:questions[index]["answer_options"][answerIndex]["value"].string!.toInt())
-                answerChoice.sort_order = questions[index]["answer_options"][answerIndex]["sort_order"].number!
-                answerChoice.abbreviation = questions[index]["answer_options"][answerIndex]["abbreviation"].string!
-                answerChoice.href = questions[index]["answer_options"][answerIndex]["href"].string!
+                answerChoice.answer_description = questions["questions"][index]["answer_options"][answerIndex]["description"].string!
+                answerChoice.type = questions["questions"][index]["answer_options"][answerIndex]["type"].string!
+                answerChoice.value = NSNumber(integer:questions["questions"][index]["answer_options"][answerIndex]["value"].string!.toInt()!)
+                answerChoice.sort_order = NSNumber(integer:questions["questions"][index]["answer_options"][answerIndex]["sort_order"].string!.toInt()!)
+                
+                //answerChoice.abbreviation = questions[index]["answer_options"][answerIndex]["abbreviation"].string!
+                //answerChoice.href = questions[index]["answer_options"][answerIndex]["href"].string!
                 
                 answerChoices.append(answerChoice)
+                }
+            }
             }
             var answerChoiceSet = NSOrderedSet(array: answerChoices)
             

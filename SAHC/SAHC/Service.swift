@@ -13,40 +13,18 @@ let restURL = "http://afc.nijhazer.com/questions"
 class Service {
     
 
-        class func getQuestions(completion: ((questions:NSData!) -> Void)) {
-        let url = NSURL( string: "https://southasianheartcenter.org/sathiapi/questions.php")
+    class func getQuestionsWithSuccess(success: ((questions: NSData!) -> Void)) {
         
-        //var picUrl = NSURL(string : "http://210.61.209.194:8088/SmarttvMedia/img/epi00001.png")
-        var responseString : NSString = ""
-        
-        func forData(completion: (NSString) -> ()) {
-            
-            let request = NSMutableURLRequest( URL: url!)
-            request.HTTPMethod = "POST"
-            var s : NSString = ""
-            let postString : String = "json={\"key\":\"1e34dfd3cbf383d348a5081be48cc821\"}"
-            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-            
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
-                data, response, error in
-                println("****** COMPLETION **********")
-                println(data);
-                if error != nil {
-                    println("error=\(error)")
-                    return
-                } else {
-                    
-                    completion(NSString(data: data, encoding: NSUTF8StringEncoding)!)
-                    println("****** COMPLETION **********")
-                    println(data);
-                }
+                loadDataFromURL(NSURL(string: restURL)!, completion:{(data, error) -> Void in
+                    if let urlData = data {
+                        success(questions: urlData)
+                    }
+                })
             }
-            task.resume()
-            
-        }
-    }
+    
     class func loadDataFromURL(url: NSURL, completion:(data: NSData?, error: NSError?) -> Void) {
-        var session = NSURLSession.sharedSession()
+        
+        /*var session = NSURLSession.sharedSession()
         
         // Use NSURLSession to get data from an NSURL
         let loadDataTask = session.dataTaskWithURL(url, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
@@ -62,6 +40,55 @@ class Service {
             }
         })
         
-        loadDataTask.resume()
+        loadDataTask.resume()*/
+        
+        var session = NSURLSession.sharedSession()
+        let url = NSURL( string: "https://southasianheartcenter.org/sathiapi/questions.php")
+        let postString = "json={\"key\":\"1e34dfd3cbf383d348a5081be48cc821\"}"
+        let request = NSMutableURLRequest(URL: url!)
+        
+        request.HTTPMethod = "POST";
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        
+            
+        let task : NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: {(data: NSData!, response: NSURLResponse!, error: NSError!)  in
+            // notice that I can omit the types of data, response and error
+            
+            // your code
+            if let responseError = error {
+                completion(data: nil, error: responseError)
+            } else if let httpResponse = response as? NSHTTPURLResponse {
+                if httpResponse.statusCode != 200 {
+                    var statusError = NSError(domain:"com.sahc", code:httpResponse.statusCode, userInfo:[NSLocalizedDescriptionKey : "HTTP status code has unexpected value."])
+                    completion(data: nil, error: statusError)
+                } else {
+                    
+                    let responseString = NSString(data: data, encoding:NSASCIIStringEncoding)
+                    
+                    println("******** response data = \(responseString)")
+                    var jsonData: NSData = responseString!.dataUsingEncoding(NSUTF8StringEncoding)!
+                    
+                    var error:NSError? = nil
+                    if let jsonObject: AnyObject = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.AllowFragments, error:&error) {
+                        if let dict = jsonObject as? NSDictionary {
+                            println(dict)
+                        } else {
+                            println("not a dictionary")
+                        }
+                    } else {
+                        println("Could not parse JSON: \(error!)")
+                    }
+                    
+                    
+                    completion(data: jsonData, error: nil)
+                }
+            }
+            
+         
+
+            })
+        task.resume()
+        
     }
 }
