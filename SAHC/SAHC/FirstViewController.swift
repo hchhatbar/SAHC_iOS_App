@@ -18,8 +18,8 @@ class FirstViewController: UIViewController {
         
         Service.getQuestionsWithSuccess { (questions) -> Void in
             let json = JSON(data: questions)
-            println(json)
-            var dataAccess = DataAccess()
+            print(json)
+            let dataAccess = DataAccess()
             dataAccess.saveQuestions(json)
             var results = dataAccess.getQuestions()
         }
@@ -76,7 +76,7 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func introductionClicked(sender: AnyObject) {
-        var questionTableViewController = QuestionTableViewController()
+        let questionTableViewController = QuestionTableViewController()
         self.view.addSubview(questionTableViewController.view)
     }
     override func didReceiveMemoryWarning() {

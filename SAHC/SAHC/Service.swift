@@ -52,7 +52,7 @@ class Service {
         
         
             
-        let task : NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: {(data: NSData!, response: NSURLResponse!, error: NSError!)  in
+        let task : NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: {(data: NSData?, response: NSURLResponse?, error: NSError?)  in
             // notice that I can omit the types of data, response and error
             
             // your code
@@ -64,20 +64,24 @@ class Service {
                     completion(data: nil, error: statusError)
                 } else {
                     
-                    let responseString = NSString(data: data, encoding:NSASCIIStringEncoding)
+                    let responseString = NSString(data: data!, encoding:NSASCIIStringEncoding)
                     
-                    println("******** response data = \(responseString)")
+                    print("******** response data = \(responseString)")
                     var jsonData: NSData = responseString!.dataUsingEncoding(NSUTF8StringEncoding)!
                     
                     var error:NSError? = nil
-                    if let jsonObject: AnyObject = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.AllowFragments, error:&error) {
+                    do {
+                        let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.AllowFragments)
                         if let dict = jsonObject as? NSDictionary {
-                            println(dict)
+                            print(dict)
                         } else {
-                            println("not a dictionary")
+                            print("not a dictionary")
                         }
-                    } else {
-                        println("Could not parse JSON: \(error!)")
+                    } catch var error1 as NSError {
+                        error = error1
+                        print("Could not parse JSON: \(error!)")
+                    } catch {
+                        fatalError()
                     }
                     
                     
