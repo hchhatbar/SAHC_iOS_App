@@ -42,7 +42,7 @@ class Service {
         
         loadDataTask.resume()*/
         
-        var session = NSURLSession.sharedSession()
+        let session = NSURLSession.sharedSession()
         let url = NSURL( string: "https://southasianheartcenter.org/sathiapi/questions.php")
         let postString = "json={\"key\":\"1e34dfd3cbf383d348a5081be48cc821\"}"
         let request = NSMutableURLRequest(URL: url!)
@@ -52,7 +52,7 @@ class Service {
         
         
             
-        let task : NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: {(data: NSData!, response: NSURLResponse!, error: NSError!)  in
+        let task : NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: {(data: NSData?, response: NSURLResponse?, error: NSError?)  in
             // notice that I can omit the types of data, response and error
             
             // your code
@@ -60,26 +60,28 @@ class Service {
                 completion(data: nil, error: responseError)
             } else if let httpResponse = response as? NSHTTPURLResponse {
                 if httpResponse.statusCode != 200 {
-                    var statusError = NSError(domain:"com.sahc", code:httpResponse.statusCode, userInfo:[NSLocalizedDescriptionKey : "HTTP status code has unexpected value."])
+                    let statusError = NSError(domain:"com.sahc", code:httpResponse.statusCode, userInfo:[NSLocalizedDescriptionKey : "HTTP status code has unexpected value."])
                     completion(data: nil, error: statusError)
                 } else {
                     
-                    let responseString = NSString(data: data, encoding:NSASCIIStringEncoding)
+                    let responseString = NSString(data: data!, encoding:NSASCIIStringEncoding)
                     
-                    println("******** response data = \(responseString)")
-                    var jsonData: NSData = responseString!.dataUsingEncoding(NSUTF8StringEncoding)!
+                    print("******** response data = \(responseString)")
+                    let jsonData: NSData = responseString!.dataUsingEncoding(NSUTF8StringEncoding)!
                     
-                    var error:NSError? = nil
-                    if let jsonObject: AnyObject = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.AllowFragments, error:&error) {
+                    //let error:NSError? = nil
+                    var jsonObject: AnyObject
+                    do {
+                        try jsonObject = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.AllowFragments)
                         if let dict = jsonObject as? NSDictionary {
-                            println(dict)
+                            print(dict)
                         } else {
-                            println("not a dictionary")
+                            print("not a dictionary")
                         }
-                    } else {
-                        println("Could not parse JSON: \(error!)")
+                        
+                    } catch _ {
+                        
                     }
-                    
                     
                     completion(data: jsonData, error: nil)
                 }

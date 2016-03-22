@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  HRAViewController.swift
 //  SAHC
 //
 //  Created by Hemen Chhatbar on 10/25/15.
@@ -8,7 +8,18 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+
+    let initialHRACheckList: [HRAItem] = [
+        HRAItem(image: UIImage(named: "Introduction")!, itemName: "Get Started"),
+        HRAItem(image: UIImage(named: "PersonalStatus")!, itemName: "Personal Status"),
+        HRAItem(image: UIImage(named: "MedicalHistory")!, itemName: "Medical History"),
+        HRAItem(image: UIImage(named: "Exercise")!, itemName: "Exercise"),
+        HRAItem(image: UIImage(named: "Diet")!, itemName: "Diet"),
+        HRAItem(image: UIImage(named: "Sleep")!, itemName: "Sleep"),
+        HRAItem(image: UIImage(named: "Conclusion")!, itemName: "Next Steps")
+    ]
 
     var scroll = UIScrollView()
     override func viewDidLoad() {
@@ -18,10 +29,10 @@ class FirstViewController: UIViewController {
         
         Service.getQuestionsWithSuccess { (questions) -> Void in
             let json = JSON(data: questions)
-            println(json)
-            var dataAccess = DataAccess()
+            print(json)
+            let dataAccess = DataAccess()
             dataAccess.saveQuestions(json)
-            var results = dataAccess.getQuestions()
+            _ = dataAccess.getQuestions()
         }
         
         
@@ -76,12 +87,27 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func introductionClicked(sender: AnyObject) {
-        var questionTableViewController = QuestionTableViewController()
+        let questionTableViewController = QuestionTableViewController()
         self.view.addSubview(questionTableViewController.view)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.initialHRACheckList.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("HRATableViewCell") as! HRATableViewCell
+        
+        cell.itemImageView.image = self.initialHRACheckList[indexPath.row].image
+        cell.itemNameLbl.text = self.initialHRACheckList[indexPath.row].itemName
+        cell.progressView.progress = self.initialHRACheckList[indexPath.row].progress
+        
+        return cell
     }
 
 
