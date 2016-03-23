@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "PersonalStatus-02.png"
+      "filename" : "Personal-Status.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Personal-Status@2x.png",
       "scale" : "2x"
     },
     {

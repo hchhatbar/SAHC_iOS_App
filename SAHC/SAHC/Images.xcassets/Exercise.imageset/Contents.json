@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "Exercise-02.png"
+      "filename" : "Exercise.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Exercise@2x.png",
       "scale" : "2x"
     },
     {

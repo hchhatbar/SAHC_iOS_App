@@ -10,7 +10,6 @@ import UIKit
 
 class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-
     let initialHRACheckList: [HRAItem] = [
         HRAItem(image: UIImage(named: "Introduction")!, itemName: "Get Started"),
         HRAItem(image: UIImage(named: "PersonalStatus")!, itemName: "Personal Status"),
@@ -21,19 +20,19 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
         HRAItem(image: UIImage(named: "Conclusion")!, itemName: "Next Steps")
     ]
 
-    var scroll = UIScrollView()
+//    var scroll = UIScrollView()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        Service.getQuestionsWithSuccess { (questions) -> Void in
-            let json = JSON(data: questions)
-            print(json)
-            let dataAccess = DataAccess()
-            dataAccess.saveQuestions(json)
-            _ = dataAccess.getQuestions()
-        }
+//        Service.getQuestionsWithSuccess { (questions) -> Void in
+//            let json = JSON(data: questions)
+//            print(json)
+//            let dataAccess = DataAccess()
+//            dataAccess.saveQuestions(json)
+//            _ = dataAccess.getQuestions()
+//        }
         
         
         
@@ -73,27 +72,27 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
         var results = dataAccess.getQuestions()*/
     } */
     }
-    
-    func getQuestionsFromJSON(){
-        
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        scroll.backgroundColor = UIColor.redColor();
-        scroll.scrollEnabled = true
-        scroll.pagingEnabled = true;
-        self.view.addSubview(scroll)
-    }
-
-    @IBAction func introductionClicked(sender: AnyObject) {
-        let questionTableViewController = QuestionTableViewController()
-        self.view.addSubview(questionTableViewController.view)
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
+//    func getQuestionsFromJSON(){
+//        
+//        
+//    }
+//    
+//    override func viewWillAppear(animated: Bool) {
+//        scroll.backgroundColor = UIColor.redColor();
+//        scroll.scrollEnabled = true
+//        scroll.pagingEnabled = true;
+//        self.view.addSubview(scroll)
+//    }
+//
+//    @IBAction func introductionClicked(sender: AnyObject) {
+//        let questionTableViewController = QuestionTableViewController()
+//        self.view.addSubview(questionTableViewController.view)
+//    }
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.initialHRACheckList.count
@@ -109,7 +108,6 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         return cell
     }
-
 
 }
 

@@ -33,6 +33,7 @@
 		61D3AAA51BDECD2A00BFE544 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AAA31BDECD2A00BFE544 /* CoreDataManager.swift */; };
 		61D3AADF1BDF17B300BFE544 /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AADE1BDF17B300BFE544 /* DataAccess.swift */; };
 		61D3AAE01BDF17B300BFE544 /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AADE1BDF17B300BFE544 /* DataAccess.swift */; };
+		F338BFA61CA22ED200A21665 /* SAHCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338BFA51CA22ED200A21665 /* SAHCTabBarController.swift */; };
 		F369CF3D1CA107580071E03E /* HRAItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F369CF3C1CA107580071E03E /* HRAItem.swift */; };
 		F369CF411CA10A7C0071E03E /* HRATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F369CF401CA10A7C0071E03E /* HRATableViewCell.swift */; };
 		F3AFC6B31C9F7C09004DD620 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AFC6B21C9F7C09004DD620 /* AboutViewController.swift */; };
@@ -72,6 +73,7 @@
 		61D3AA961BDDBFFA00BFE544 /* DB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DB.xcdatamodel; sourceTree = "<group>"; };
 		61D3AAA31BDECD2A00BFE544 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		61D3AADE1BDF17B300BFE544 /* DataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
+		F338BFA51CA22ED200A21665 /* SAHCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAHCTabBarController.swift; sourceTree = "<group>"; };
 		F369CF3C1CA107580071E03E /* HRAItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRAItem.swift; sourceTree = "<group>"; };
 		F369CF401CA10A7C0071E03E /* HRATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRATableViewCell.swift; sourceTree = "<group>"; };
 		F3AFC6B21C9F7C09004DD620 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				61C6E1251BF985BD00986FEC /* QuestionTableViewController.swift */,
 				F3AFC6B21C9F7C09004DD620 /* AboutViewController.swift */,
 				F3AFC6B41C9F7C17004DD620 /* UploadViewController.swift */,
+				F338BFA51CA22ED200A21665 /* SAHCTabBarController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				F369CF3D1CA107580071E03E /* HRAItem.swift in Sources */,
 				61D3AA971BDDBFFA00BFE544 /* DB.xcdatamodeld in Sources */,
 				61D3AA731BDDBFBD00BFE544 /* AppDelegate.swift in Sources */,
+				F338BFA61CA22ED200A21665 /* SAHCTabBarController.swift in Sources */,
 				617397371BED989400D477E9 /* SwiftyJSON.swift in Sources */,
 				6173972A1BEC31A400D477E9 /* Answer.swift in Sources */,
 				617397271BEC31A300D477E9 /* Question.swift in Sources */,

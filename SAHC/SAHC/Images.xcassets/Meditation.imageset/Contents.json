@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "Meditation-02.png"
+      "filename" : "Meditation.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Meditation@2x.png",
       "scale" : "2x"
     },
     {
