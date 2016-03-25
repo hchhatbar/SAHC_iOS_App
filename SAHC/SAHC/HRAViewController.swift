@@ -106,7 +106,7 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         cell.itemImageView.image = self.initialHRACheckList[indexPath.row].image
         cell.itemNameLbl.text = self.initialHRACheckList[indexPath.row].itemName
-        cell.progressView.progress = self.initialHRACheckList[indexPath.row].progress
+        //cell.progressView.progress = self.initialHRACheckList[indexPath.row].progress
         
         return cell
     }
