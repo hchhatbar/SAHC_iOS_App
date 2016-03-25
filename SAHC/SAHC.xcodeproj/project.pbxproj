@@ -36,6 +36,7 @@
 		F338BFA61CA22ED200A21665 /* SAHCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F338BFA51CA22ED200A21665 /* SAHCTabBarController.swift */; };
 		F369CF3D1CA107580071E03E /* HRAItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F369CF3C1CA107580071E03E /* HRAItem.swift */; };
 		F369CF411CA10A7C0071E03E /* HRATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F369CF401CA10A7C0071E03E /* HRATableViewCell.swift */; };
+		F392A02B1CA4F11D0030ECFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392A02A1CA4F11D0030ECFF /* LoginViewController.swift */; };
 		F3AFC6B31C9F7C09004DD620 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AFC6B21C9F7C09004DD620 /* AboutViewController.swift */; };
 		F3AFC6B51C9F7C17004DD620 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AFC6B41C9F7C17004DD620 /* UploadViewController.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		F338BFA51CA22ED200A21665 /* SAHCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAHCTabBarController.swift; sourceTree = "<group>"; };
 		F369CF3C1CA107580071E03E /* HRAItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRAItem.swift; sourceTree = "<group>"; };
 		F369CF401CA10A7C0071E03E /* HRATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRATableViewCell.swift; sourceTree = "<group>"; };
+		F392A02A1CA4F11D0030ECFF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F3AFC6B21C9F7C09004DD620 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F3AFC6B41C9F7C17004DD620 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				F3AFC6B21C9F7C09004DD620 /* AboutViewController.swift */,
 				F3AFC6B41C9F7C17004DD620 /* UploadViewController.swift */,
 				F338BFA51CA22ED200A21665 /* SAHCTabBarController.swift */,
+				F392A02A1CA4F11D0030ECFF /* LoginViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F392A02B1CA4F11D0030ECFF /* LoginViewController.swift in Sources */,
 				F3AFC6B51C9F7C17004DD620 /* UploadViewController.swift in Sources */,
 				61D3AA771BDDBFBD00BFE544 /* ProfileViewController.swift in Sources */,
 				61C6E1261BF985BD00986FEC /* QuestionTableViewController.swift in Sources */,
