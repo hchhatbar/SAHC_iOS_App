@@ -94,6 +94,8 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
 //        // Dispose of any resources that can be recreated.
 //    }
     
+    // MARK: UITableViewDataSource methods
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.initialHRACheckList.count
     }
@@ -108,6 +110,16 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         return cell
     }
+    
+    // MARK: End UITableViewDataSource methods
+    
+    // MARK: Target-Actions
+    
+    @IBAction func signoutBtnPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: End Target-Actions
 
 }
 

@@ -20,4 +20,12 @@ class UploadViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Target-Actions
+    
+    @IBAction func signoutBtnPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // MARK: End Target-Actions
+    
 }

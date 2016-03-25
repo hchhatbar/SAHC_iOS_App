@@ -83,6 +83,9 @@
                     <navigationItem key="navigationItem" title="Dashboard" id="gUd-Tr-G4j">
                         <barButtonItem key="rightBarButtonItem" title="Signout" id="Yd7-pE-nmF">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="signoutBtnPressed:" destination="9pv-A4-QxB" id="Fxf-Bt-U0v"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -107,6 +110,9 @@
                     <navigationItem key="navigationItem" title="Profile" id="BEN-XF-T8Y">
                         <barButtonItem key="rightBarButtonItem" title="Signout" id="GAC-27-Esa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="signoutBtnPressed:" destination="8rJ-Kc-sve" id="TnE-jO-d1V"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -131,6 +137,9 @@
                     <navigationItem key="navigationItem" title="About" id="SQx-WR-0Ji">
                         <barButtonItem key="rightBarButtonItem" title="Signout" id="N5I-EA-4eJ">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="signoutBtnPressed:" destination="2Vz-5C-d2y" id="BFI-qh-ZIb"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -155,6 +164,9 @@
                     <navigationItem key="navigationItem" title="Upload" id="OL3-82-93O">
                         <barButtonItem key="rightBarButtonItem" title="Signout" id="eHB-7Y-S4m">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="signoutBtnPressed:" destination="rDg-bt-9Sv" id="gNK-eW-5HZ"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
