@@ -25,7 +25,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tr-Of-iPX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="378" y="-721"/>
+            <point key="canvasLocation" x="753" y="-234"/>
         </scene>
         <!--HRA View Controller-->
         <scene sceneID="hNz-n2-bh7">
@@ -81,12 +81,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="HRA" image="first" id="Sth-H0-lYn"/>
                     <navigationItem key="navigationItem" title="Dashboard" id="gUd-Tr-G4j">
-                        <barButtonItem key="rightBarButtonItem" title="Signout" id="Yd7-pE-nmF"/>
+                        <barButtonItem key="rightBarButtonItem" title="Signout" id="Yd7-pE-nmF">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192" y="-721"/>
+            <point key="canvasLocation" x="1456" y="-234"/>
         </scene>
         <!--Profile View Controller Scene-->
         <scene sceneID="wg7-f3-ORb">
@@ -102,10 +104,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="second" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" title="Profile" id="BEN-XF-T8Y">
+                        <barButtonItem key="rightBarButtonItem" title="Signout" id="GAC-27-Esa">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1450" y="-3"/>
+            <point key="canvasLocation" x="1442" y="459"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="5MJ-Jo-sVb">
@@ -121,10 +128,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="second" id="z7V-40-YWq"/>
+                    <navigationItem key="navigationItem" title="About" id="SQx-WR-0Ji">
+                        <barButtonItem key="rightBarButtonItem" title="Signout" id="N5I-EA-4eJ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wvw-Le-l6I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1450" y="768"/>
+            <point key="canvasLocation" x="1442" y="-933"/>
         </scene>
         <!--Upload View Controller-->
         <scene sceneID="Tc7-7T-1CW">
@@ -140,10 +152,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="first" id="qbc-LJ-Us0"/>
+                    <navigationItem key="navigationItem" title="Upload" id="OL3-82-93O">
+                        <barButtonItem key="rightBarButtonItem" title="Signout" id="eHB-7Y-S4m">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dD-c5-c2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1335" y="1617"/>
+            <point key="canvasLocation" x="1442" y="1150"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="37g-Bm-Tcm">
@@ -172,8 +189,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7h-E3-gul">
-                                <rect key="frame" x="534" y="342" width="47" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7h-E3-gul">
+                                <rect key="frame" x="20" y="374" width="561" height="37"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.51764705879999995" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="BPr-i4-Efj"/>
+                                </constraints>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <segue destination="49e-Tb-3d3" kind="show" id="hF9-Fa-DVj"/>
@@ -182,14 +203,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="p7h-E3-gul" firstAttribute="centerX" secondItem="r74-I5-bpe" secondAttribute="centerX" id="0vr-6T-sdt"/>
                             <constraint firstItem="cMZ-ic-0Ge" firstAttribute="leading" secondItem="CCS-cW-oZ4" secondAttribute="leadingMargin" id="1hS-nz-9Gd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="p7h-E3-gul" secondAttribute="trailing" constant="-1" id="6YX-S1-Ech"/>
                             <constraint firstItem="r74-I5-bpe" firstAttribute="top" secondItem="bnq-v3-OCv" secondAttribute="bottom" constant="8" symbolic="YES" id="Efa-Ja-kS1"/>
                             <constraint firstItem="cMZ-ic-0Ge" firstAttribute="trailing" secondItem="CCS-cW-oZ4" secondAttribute="trailingMargin" id="Igs-nU-3G1"/>
-                            <constraint firstItem="p7h-E3-gul" firstAttribute="top" secondItem="r74-I5-bpe" secondAttribute="bottom" constant="8" symbolic="YES" id="KYi-2S-uCc"/>
                             <constraint firstItem="cMZ-ic-0Ge" firstAttribute="top" secondItem="Se8-Uz-RKg" secondAttribute="bottom" constant="208" id="PR6-VI-FKJ"/>
+                            <constraint firstItem="p7h-E3-gul" firstAttribute="leading" secondItem="r74-I5-bpe" secondAttribute="leading" id="QpR-Uz-FcS"/>
                             <constraint firstItem="bnq-v3-OCv" firstAttribute="trailing" secondItem="r74-I5-bpe" secondAttribute="trailing" id="Z1h-WS-xzo"/>
                             <constraint firstItem="bnq-v3-OCv" firstAttribute="leading" secondItem="r74-I5-bpe" secondAttribute="leading" id="eLV-De-a9C"/>
+                            <constraint firstItem="p7h-E3-gul" firstAttribute="top" secondItem="r74-I5-bpe" secondAttribute="bottom" constant="40" id="pyd-ac-vn8"/>
                             <constraint firstItem="cMZ-ic-0Ge" firstAttribute="trailing" secondItem="bnq-v3-OCv" secondAttribute="trailing" id="qXT-Nb-IyH"/>
                             <constraint firstItem="cMZ-ic-0Ge" firstAttribute="leading" secondItem="bnq-v3-OCv" secondAttribute="leading" id="tM2-cB-Qg1"/>
                             <constraint firstItem="bnq-v3-OCv" firstAttribute="top" secondItem="cMZ-ic-0Ge" secondAttribute="bottom" constant="8" symbolic="YES" id="yrq-Wq-xk3"/>
@@ -211,15 +233,78 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2Vz-5C-d2y" kind="relationship" relationship="viewControllers" id="jaQ-2G-Ffx"/>
-                        <segue destination="uJD-a1-TGP" kind="relationship" relationship="viewControllers" id="uhI-ED-aah"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="tgw-pn-lcS"/>
-                        <segue destination="rDg-bt-9Sv" kind="relationship" relationship="viewControllers" id="b1k-3c-EU8"/>
+                        <segue destination="EgY-tx-oVs" kind="relationship" relationship="viewControllers" id="mbP-aA-uDt"/>
+                        <segue destination="uJD-a1-TGP" kind="relationship" relationship="viewControllers" id="aVM-fP-wME"/>
+                        <segue destination="Mvs-eH-670" kind="relationship" relationship="viewControllers" id="L8t-CQ-Xwo"/>
+                        <segue destination="AA1-tj-ytK" kind="relationship" relationship="viewControllers" id="g2U-IY-mC7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41" y="114"/>
+            <point key="canvasLocation" x="-36" y="114"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="qV9-pS-YTf">
+            <objects>
+                <navigationController id="EgY-tx-oVs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fhw-OW-DTo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4cL-FG-Woi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96078431369999995" green="0.51764705879999995" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Vz-5C-d2y" kind="relationship" relationship="rootViewController" id="NYH-nR-wxf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fv9-7L-dSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="-933"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="gov-Gd-XeQ">
+            <objects>
+                <navigationController id="Mvs-eH-670" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Cb3-77-lne"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LaA-hP-Cf0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96078431369999995" green="0.51764705879999995" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="f4u-Wz-dxh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ShC-9E-x5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="459"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="xej-2q-kQk">
+            <objects>
+                <navigationController id="AA1-tj-ytK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="9dS-SL-KZj"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rg0-Tr-KBi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96078431369999995" green="0.51764705879999995" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rDg-bt-9Sv" kind="relationship" relationship="rootViewController" id="FTg-Qo-sQw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Um-XL-GnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="1150"/>
         </scene>
     </scenes>
     <resources>
