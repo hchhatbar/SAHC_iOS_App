@@ -10,16 +10,19 @@ import Foundation
 import CoreData
 
 class DataAccess: NSObject{
+    
+    static let sharedInstance = DataAccess()
+    
     let kEntityName = "Question"
 
     /// Managed object context for the view controller (which is bound to the persistent store coordinator for the application).
-    private lazy var managedObjectContext: NSManagedObjectContext = {
-        let moc = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
-        
-        moc.persistentStoreCoordinator = CoreDataManager.sharedManager.persistentStoreCoordinator
-        
-        return moc
-        }()
+//    private lazy var managedObjectContext: NSManagedObjectContext = {
+//        let moc = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+//        
+//        moc.persistentStoreCoordinator = CoreDataManager.sharedManager.persistentStoreCoordinator
+//        
+//        return moc
+//        }()
 
     func getQuestions() -> [Question] {
         let error: NSErrorPointer = nil
@@ -31,7 +34,7 @@ class DataAccess: NSObject{
         // Execute the Fetch Request
         var results: [Question] = []
         do {
-            try results = managedObjectContext.executeFetchRequest(fetchRequest) as! [Question]
+            try results = CoreDataManager.sharedManager.managedObjectContext!.executeFetchRequest(fetchRequest) as! [Question]
         } catch _ {
             
         }
@@ -59,11 +62,11 @@ class DataAccess: NSObject{
     func saveQuestion()
     {
         
-        let context =  managedObjectContext //CoreDataManager.sharedManager.managedObjectContext
-        let entity =  NSEntityDescription.entityForName("Question", inManagedObjectContext: context)!
+        let context =  CoreDataManager.sharedManager.managedObjectContext
+        let entity =  NSEntityDescription.entityForName("Question", inManagedObjectContext: context!)!
         
-        _ =  NSEntityDescription.entityForName("AnswerChoice", inManagedObjectContext: context)!
-        _ = Question(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
+        _ =  NSEntityDescription.entityForName("AnswerChoice", inManagedObjectContext: context!)!
+        _ = Question(entity: entity, insertIntoManagedObjectContext: context!)
         /*
         question.questionId = "testIdP"
         question.questionText = "some question text"
@@ -94,14 +97,14 @@ class DataAccess: NSObject{
 
         for index in 0...questions["questions"].count-1{
             
-            let context =  managedObjectContext
-            let entity =  NSEntityDescription.entityForName("Question", inManagedObjectContext: context)!
+            let context =  CoreDataManager.sharedManager.managedObjectContext //managedObjectContext
+            let entity =  NSEntityDescription.entityForName("Question", inManagedObjectContext: context!)!
             
-            let answerChoiceEntity =  NSEntityDescription.entityForName("AnswerChoice", inManagedObjectContext: context)!
+            let answerChoiceEntity =  NSEntityDescription.entityForName("AnswerChoice", inManagedObjectContext: context!)!
             
-            let question = Question(entity: entity, insertIntoManagedObjectContext: managedObjectContext)
+            let question = Question(entity: entity, insertIntoManagedObjectContext: context!)
             
-            question.category = questions["questions"][index]["category"]["description"].string!
+            question.category = questions["questions"][index]["category"].string!
             question.abbreviation = questions["questions"][index]["abbreviation"].string!
             question.type = questions["questions"][index]["type"].string!
             question.text = questions["questions"][index]["text"].string!
@@ -119,7 +122,7 @@ class DataAccess: NSObject{
             if(questions["questions"][index]["answer_options"].count > 0  ){ //&& index != 11 && index != 22){
             for answerIndex in 0...questions["questions"][index]["answer_options"].count - 1{
                 if(Int(questions["questions"][index]["answer_options"][answerIndex]["value"].string!) != nil){
-                let answerChoice = AnswerChoice(entity: answerChoiceEntity, insertIntoManagedObjectContext: managedObjectContext)
+                let answerChoice = AnswerChoice(entity: answerChoiceEntity, insertIntoManagedObjectContext: context!)
                 answerChoice.answer_description = questions["questions"][index]["answer_options"][answerIndex]["description"].string!
                 answerChoice.type = questions["questions"][index]["answer_options"][answerIndex]["type"].string!
                 answerChoice.value = NSNumber(integer:Int(questions["questions"][index]["answer_options"][answerIndex]["value"].string!)!)

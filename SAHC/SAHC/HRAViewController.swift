@@ -26,13 +26,13 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
         // Do any additional setup after loading the view, typically from a nib.
         
         
-//        Service.getQuestionsWithSuccess { (questions) -> Void in
-//            let json = JSON(data: questions)
-//            print(json)
-//            let dataAccess = DataAccess()
-//            dataAccess.saveQuestions(json)
-//            _ = dataAccess.getQuestions()
-//        }
+        Service.getQuestionsWithSuccess { (questions) -> Void in
+            let json = JSON(data: questions)
+            print(json)
+            //let dataAccess = DataAccess()
+            //DataAccess.sharedInstance.saveQuestions(json)
+            _ = DataAccess.sharedInstance.getQuestions()
+        }
         
         
         
