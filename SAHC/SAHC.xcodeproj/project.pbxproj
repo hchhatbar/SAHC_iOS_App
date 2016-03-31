@@ -19,7 +19,7 @@
 		617397381BED989400D477E9 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617397361BED989400D477E9 /* SwiftyJSON.swift */; };
 		618EA1251C3DCB4400AE2CC1 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 618EA1241C3DCB4400AE2CC1 /* questions.json */; };
 		618EA1271C3DCEDD00AE2CC1 /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = 618EA1261C3DCEDD00AE2CC1 /* person.json */; };
-		61C6E1261BF985BD00986FEC /* QuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C6E1251BF985BD00986FEC /* QuestionTableViewController.swift */; };
+		61C6E1261BF985BD00986FEC /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C6E1251BF985BD00986FEC /* QuestionViewController.swift */; };
 		61D3AA731BDDBFBD00BFE544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AA721BDDBFBD00BFE544 /* AppDelegate.swift */; };
 		61D3AA751BDDBFBD00BFE544 /* HRAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AA741BDDBFBD00BFE544 /* HRAViewController.swift */; };
 		61D3AA771BDDBFBD00BFE544 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D3AA761BDDBFBD00BFE544 /* ProfileViewController.swift */; };
@@ -39,6 +39,8 @@
 		F392A02B1CA4F11D0030ECFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392A02A1CA4F11D0030ECFF /* LoginViewController.swift */; };
 		F3AFC6B31C9F7C09004DD620 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AFC6B21C9F7C09004DD620 /* AboutViewController.swift */; };
 		F3AFC6B51C9F7C17004DD620 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AFC6B41C9F7C17004DD620 /* UploadViewController.swift */; };
+		F3C463341CACC7A60078FD43 /* QuestionaireAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C463331CACC7A60078FD43 /* QuestionaireAnswerTableViewCell.swift */; };
+		F3C463371CACD60A0078FD43 /* AnswerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C463361CACD60A0078FD43 /* AnswerItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +61,7 @@
 		617397361BED989400D477E9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		618EA1241C3DCB4400AE2CC1 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		618EA1261C3DCEDD00AE2CC1 /* person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
-		61C6E1251BF985BD00986FEC /* QuestionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewController.swift; sourceTree = "<group>"; };
+		61C6E1251BF985BD00986FEC /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		61D3AA6D1BDDBFBD00BFE544 /* SAHC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAHC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D3AA711BDDBFBD00BFE544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61D3AA721BDDBFBD00BFE544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,8 @@
 		F392A02A1CA4F11D0030ECFF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F3AFC6B21C9F7C09004DD620 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F3AFC6B41C9F7C17004DD620 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		F3C463331CACC7A60078FD43 /* QuestionaireAnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionaireAnswerTableViewCell.swift; sourceTree = "<group>"; };
+		F3C463361CACD60A0078FD43 /* AnswerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +109,7 @@
 			children = (
 				61D3AA741BDDBFBD00BFE544 /* HRAViewController.swift */,
 				61D3AA761BDDBFBD00BFE544 /* ProfileViewController.swift */,
-				61C6E1251BF985BD00986FEC /* QuestionTableViewController.swift */,
+				61C6E1251BF985BD00986FEC /* QuestionViewController.swift */,
 				F3AFC6B21C9F7C09004DD620 /* AboutViewController.swift */,
 				F3AFC6B41C9F7C17004DD620 /* UploadViewController.swift */,
 				F338BFA51CA22ED200A21665 /* SAHCTabBarController.swift */,
@@ -194,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				F369CF3C1CA107580071E03E /* HRAItem.swift */,
+				F3C463361CACD60A0078FD43 /* AnswerItem.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				F369CF401CA10A7C0071E03E /* HRATableViewCell.swift */,
+				F3C463331CACC7A60078FD43 /* QuestionaireAnswerTableViewCell.swift */,
 			);
 			name = CustomTableViewCells;
 			sourceTree = "<group>";
@@ -320,9 +326,11 @@
 			files = (
 				F392A02B1CA4F11D0030ECFF /* LoginViewController.swift in Sources */,
 				F3AFC6B51C9F7C17004DD620 /* UploadViewController.swift in Sources */,
+				F3C463341CACC7A60078FD43 /* QuestionaireAnswerTableViewCell.swift in Sources */,
 				61D3AA771BDDBFBD00BFE544 /* ProfileViewController.swift in Sources */,
-				61C6E1261BF985BD00986FEC /* QuestionTableViewController.swift in Sources */,
+				61C6E1261BF985BD00986FEC /* QuestionViewController.swift in Sources */,
 				F369CF3D1CA107580071E03E /* HRAItem.swift in Sources */,
+				F3C463371CACD60A0078FD43 /* AnswerItem.swift in Sources */,
 				61D3AA971BDDBFFA00BFE544 /* DB.xcdatamodeld in Sources */,
 				61D3AA731BDDBFBD00BFE544 /* AppDelegate.swift in Sources */,
 				F338BFA61CA22ED200A21665 /* SAHCTabBarController.swift in Sources */,

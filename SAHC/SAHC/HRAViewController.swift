@@ -94,6 +94,16 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
 //        // Dispose of any resources that can be recreated.
 //    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let index = sender as! Int
+        
+        if segue.destinationViewController is QuestionViewController {
+            let viewController = segue.destinationViewController as! QuestionViewController
+            viewController.navigationItem.title = self.initialHRACheckList[index].itemName
+        }
+    }
+    
     // MARK: UITableViewDataSource methods
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,6 +122,14 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     // MARK: End UITableViewDataSource methods
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("DashboardToQuestionaireSegue", sender: indexPath.row)
+    }
+    
+    // MARK: UITableViewDelegate methods
+    
+    // MARK: End UITableViewDelegate methods
     
     // MARK: Target-Actions
     
