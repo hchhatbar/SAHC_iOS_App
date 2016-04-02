@@ -45,8 +45,8 @@ class Service {
         let session = NSURLSession.sharedSession()
 //        let url = NSURL( string: "https://southasianheartcenter.org/sathiapi/questions.php")
         let url = NSURL( string: "http://sathiapi.staging.southasianheartcenter.org/questions.php")
-        let postString = "json={\"key\":\"1e34dfd3cbf383d348a5081be48cc821\", \"authCode\":\"o56xQZpm\", \"p\":\"4086884646\" }"
-//        let postString = "json={\"key\":\"1e34dfd3cbf383d348a5081be48cc821\"}"
+        //let postString = "json={\"key\":\"1e34dfd3cbf383d348a5081be48cc821\", \"authCode\":\"o56xQZpm\", \"p\":\"4086884646\" }"
+        let postString = "json={\"key\":\"219cbfbb78a946\"}"
         let request = NSMutableURLRequest(URL: url!)
         
         request.HTTPMethod = "POST";
