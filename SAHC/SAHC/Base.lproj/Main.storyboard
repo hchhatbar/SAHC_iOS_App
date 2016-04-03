@@ -342,7 +342,7 @@
                                 </constraints>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="hF9-Fa-DVj"/>
+                                    <action selector="signInBtnPressed:" destination="OMd-iG-h96" eventType="touchUpInside" id="wMW-em-kgI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -362,6 +362,12 @@
                             <constraint firstItem="bnq-v3-OCv" firstAttribute="top" secondItem="cMZ-ic-0Ge" secondAttribute="bottom" constant="8" symbolic="YES" id="yrq-Wq-xk3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authCodeTxtField" destination="cMZ-ic-0Ge" id="84g-25-dDQ"/>
+                        <outlet property="emailTxtField" destination="bnq-v3-OCv" id="7Nw-bF-HMV"/>
+                        <outlet property="phoneNumberTxtField" destination="r74-I5-bpe" id="u3a-2n-u4o"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="LoginToLandingSegue" id="nsd-W0-YuP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZH-Dq-mVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

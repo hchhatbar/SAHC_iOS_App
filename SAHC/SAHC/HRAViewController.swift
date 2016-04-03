@@ -25,6 +25,7 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        print(Service.sharedInstance.sessionKey)
         
         Service.getQuestionsWithSuccess { (questions) -> Void in
             let json = JSON(data: questions)
