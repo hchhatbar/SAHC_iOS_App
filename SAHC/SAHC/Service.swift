@@ -37,19 +37,19 @@ class Service {
     
     // set constructor to private because we want to only use the sharedInstance
     private init(){
-
+        
     }
     
     /**
-    *   Method will authenticate a user against the API based on the credentials passed
-    *   and store the session key within the class. Returns true or false whether the
-    *   API authentication passed or failed
-    *   
-    *   Reason for the completion block of code is so we have the ability to throw exceptions
-    *   whether its network related, server error related, etc. but at the same time return
-    *   the true or false as intended
-    *
-    **/
+     *   Method will authenticate a user against the API based on the credentials passed
+     *   and store the session key within the class. Returns true or false whether the
+     *   API authentication passed or failed
+     *
+     *   Reason for the completion block of code is so we have the ability to throw exceptions
+     *   whether its network related, server error related, etc. but at the same time return
+     *   the true or false as intended
+     *
+     **/
     func authenticate(authCode: String, email: String, phoneNumber: String, completion: (inner: () throws -> Bool) -> ()) {
         
         let jsonStr = "json={\"authCode\":\"\(authCode)\",\"email\":\"\(email)\",\"p\":\"\(phoneNumber)\"}&Submit=Submit".stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
@@ -86,7 +86,7 @@ class Service {
             // at this point, valid json data was passed in
             do{
                 if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary {
-
+                    
                     if let success = json["success"] as? String {
                         if success == "true" {
                             if let sessionKey = json["sessionKey"] as? String {
@@ -109,41 +109,41 @@ class Service {
             }
             
         })
-
+        
         task.resume()
     }
-
+    
     class func getQuestionsWithSuccess(success: ((questions: NSData!) -> Void)) {
         
-                loadDataFromURL(NSURL(string: restURL)!, completion:{(data, error) -> Void in
-                    if let urlData = data {
-                        success(questions: urlData)
-                    }
-                })
+        loadDataFromURL(NSURL(string: restURL)!, completion:{(data, error) -> Void in
+            if let urlData = data {
+                success(questions: urlData)
             }
+        })
+    }
     
     class func loadDataFromURL(url: NSURL, completion:(data: NSData?, error: NSError?) -> Void) {
         
         /*var session = NSURLSession.sharedSession()
-        
-        // Use NSURLSession to get data from an NSURL
-        let loadDataTask = session.dataTaskWithURL(url, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
-            if let responseError = error {
-                completion(data: nil, error: responseError)
-            } else if let httpResponse = response as? NSHTTPURLResponse {
-                if httpResponse.statusCode != 200 {
-                    var statusError = NSError(domain:"com.sahc", code:httpResponse.statusCode, userInfo:[NSLocalizedDescriptionKey : "HTTP status code has unexpected value."])
-                    completion(data: nil, error: statusError)
-                } else {
-                    completion(data: data, error: nil)
-                }
-            }
-        })
-        
-        loadDataTask.resume()*/
+         
+         // Use NSURLSession to get data from an NSURL
+         let loadDataTask = session.dataTaskWithURL(url, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+         if let responseError = error {
+         completion(data: nil, error: responseError)
+         } else if let httpResponse = response as? NSHTTPURLResponse {
+         if httpResponse.statusCode != 200 {
+         var statusError = NSError(domain:"com.sahc", code:httpResponse.statusCode, userInfo:[NSLocalizedDescriptionKey : "HTTP status code has unexpected value."])
+         completion(data: nil, error: statusError)
+         } else {
+         completion(data: data, error: nil)
+         }
+         }
+         })
+         
+         loadDataTask.resume()*/
         
         let session = NSURLSession.sharedSession()
-//        let url = NSURL( string: "https://southasianheartcenter.org/sathiapi/questions.php")
+        //        let url = NSURL( string: "https://southasianheartcenter.org/sathiapi/questions.php")
         let url = NSURL( string: "http://sathiapi.staging.southasianheartcenter.org/questions.php")
         //let postString = "json={\"key\":\"1e34dfd3cbf383d348a5081be48cc821\", \"authCode\":\"o56xQZpm\", \"p\":\"4086884646\" }"
         let postString = "{\"key\":\"62c2c1e7282edb\"}"
@@ -153,7 +153,7 @@ class Service {
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
         
         
-            
+        
         let task : NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: {(data: NSData?, response: NSURLResponse?, error: NSError?)  in
             // notice that I can omit the types of data, response and error
             
@@ -189,9 +189,9 @@ class Service {
                 }
             }
             
-         
-
-            })
+            
+            
+        })
         task.resume()
         
     }
