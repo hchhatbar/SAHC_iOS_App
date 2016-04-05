@@ -15,7 +15,7 @@ class Service {
     enum AuthenticationError: ErrorType {
         case AuthenticationAPINotReachable
         case AuthenticationCallThrewError(error: NSError)
-        case AuthenticationResponseNotOK
+        case AuthenticationResponseNotOK(httpCode: Int)
         case AuthenticationResponseMalformed(data: NSData, error: NSError)
         case AuthenticationResponseUnrecognized(json: NSDictionary)
     }
@@ -72,14 +72,19 @@ class Service {
             
             // first check the obvious, error
             if let error = error {
-                NSLog("error occured: %@",error.localizedDescription)
+                if error.code == NSURLErrorNotConnectedToInternet {
+                    completion(inner: { throw AuthenticationError.AuthenticationAPINotReachable })
+                    return
+                }
                 completion(inner: { throw AuthenticationError.AuthenticationCallThrewError(error: error) })
+                return
             }
             
             // check the actual response headers
             if let httpResponse = response as? NSHTTPURLResponse {
                 if httpResponse.statusCode != 200 {
-                    completion(inner: {throw AuthenticationError.AuthenticationResponseNotOK })
+                    completion(inner: {throw AuthenticationError.AuthenticationResponseNotOK(httpCode: httpResponse.statusCode) })
+                    return
                 }
             }
             
@@ -92,20 +97,25 @@ class Service {
                             if let sessionKey = json["sessionKey"] as? String {
                                 self.sessionKey = sessionKey
                                 completion(inner: { return true })
+                                return
                             } else {
                                 completion(inner: {throw AuthenticationError.AuthenticationResponseUnrecognized(json: json)} )
+                                return
                             }
                         } else if success == "false" {
                             completion(inner: { return false })
+                            return
                         }
                     } else {
                         completion(inner: {throw AuthenticationError.AuthenticationResponseUnrecognized(json: json) })
+                        return
                     }
                 }
                 
             } catch let parseError as NSError {
                 NSLog("error occured: %@",parseError.localizedDescription)
                 completion(inner: {throw AuthenticationError.AuthenticationResponseMalformed(data: data!, error: parseError) })
+                return
             }
             
         })

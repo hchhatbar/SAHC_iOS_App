@@ -1,0 +1,17 @@
+/* 
+  SAHC.strings
+  SAHC
+
+  Created by Michael Hari on 4/4/16.
+  Copyright © 2016 AppForCause. All rights reserved.
+*/
+
+// LoginViewController
+"Logging in..." = "Logging in...";
+"Authentication Failure" = "Authentication Failure";
+"Your authcode, email and/or phone number is incorrect, please try again" = "Your authcode, email and/or phone number is incorrect, please try again";
+"The Internet connection appears to be offline." = "The Internet connection appears to be offline.";
+"OK" = "OK";
+"No Internet" = "No Internet";
+"Unknown Server Error" = "Unknown Server Error";
+"Server is currently offline, please try again later." = "Server is currently offline, please try again later.";
