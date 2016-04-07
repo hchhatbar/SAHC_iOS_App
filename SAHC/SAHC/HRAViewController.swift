@@ -27,13 +27,29 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         print(Service.sharedInstance.sessionKey)
         
-        Service.getQuestionsWithSuccess { (questions) -> Void in
-            let json = JSON(data: questions)
-            print(json)
-            //let dataAccess = DataAccess()
-            //DataAccess.sharedInstance.saveQuestions(json)
-            _ = DataAccess.sharedInstance.getQuestions()
-        }
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), {
+            
+            Service.sharedInstance.refreshQuestions { (inner: () throws -> Bool) -> Void in
+                
+                // dismiss spinner
+//                dispatch_async(dispatch_get_main_queue(), {
+//                    hud.hideAnimated(true)
+//                })
+                
+                do {
+                    let success = try inner() // get result
+                } catch let error {
+                }
+            }
+        })
+        
+//        Service.getQuestionsWithSuccess { (questions) -> Void in
+//            let json = JSON(data: questions)
+//            print(json)
+//            //let dataAccess = DataAccess()
+//            //DataAccess.sharedInstance.saveQuestions(json)
+//            _ = DataAccess.sharedInstance.getQuestions()
+//        }
         
         
         

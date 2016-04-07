@@ -8,7 +8,7 @@
 
 class SurveyQuestion {
     
-    
+    var id: Int
     var abbreviation: String
     var category: String
     var type: String
@@ -17,10 +17,11 @@ class SurveyQuestion {
     var tipText: String
     var sortOrder: Int
     var answerOptions: [AnswerOption]?
+    var displayRules: [DisplayRule]?
     
-    
-    init(abbreviation: String, category: String, type: String, text: String, label: String, tipText: String, sortOrder: Int, answerOptions: [AnswerOption]) {
+    init(id: Int, abbreviation: String, category: String, type: String, text: String, label: String, tipText: String, sortOrder: Int, answerOptions: [AnswerOption]?, displayRules: [DisplayRule]?) {
         
+        self.id = id
         self.abbreviation = abbreviation
         self.category = category
         self.type = type
@@ -29,6 +30,7 @@ class SurveyQuestion {
         self.tipText = tipText
         self.sortOrder = sortOrder
         self.answerOptions = answerOptions
+        self.displayRules = displayRules
         
     }
 //    convenience init(abbreviation: String, category: String, type: String, text: String, label: String, tipText: String, sortOrder: Int, answerOptions: [AnswerOption]) {

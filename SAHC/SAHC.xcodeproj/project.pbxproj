@@ -41,6 +41,7 @@
 		F369CF3D1CA107580071E03E /* HRAItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F369CF3C1CA107580071E03E /* HRAItem.swift */; };
 		F369CF411CA10A7C0071E03E /* HRATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F369CF401CA10A7C0071E03E /* HRATableViewCell.swift */; };
 		F37103D81CB362EF00C355C1 /* SAHC.strings in Resources */ = {isa = PBXBuildFile; fileRef = F37103DA1CB362EF00C355C1 /* SAHC.strings */; };
+		F37103DF1CB38A3500C355C1 /* DisplayRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37103DE1CB38A3500C355C1 /* DisplayRule.swift */; };
 		F392A02B1CA4F11D0030ECFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F392A02A1CA4F11D0030ECFF /* LoginViewController.swift */; };
 		F3AFC6B31C9F7C09004DD620 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AFC6B21C9F7C09004DD620 /* AboutViewController.swift */; };
 		F3AFC6B51C9F7C17004DD620 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AFC6B41C9F7C17004DD620 /* UploadViewController.swift */; };
@@ -92,6 +93,7 @@
 		F369CF401CA10A7C0071E03E /* HRATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRATableViewCell.swift; sourceTree = "<group>"; };
 		F37103D91CB362EF00C355C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/SAHC.strings; sourceTree = "<group>"; };
 		F37103DB1CB362F700C355C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SAHC.strings; sourceTree = "<group>"; };
+		F37103DE1CB38A3500C355C1 /* DisplayRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayRule.swift; sourceTree = "<group>"; };
 		F392A02A1CA4F11D0030ECFF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F3AFC6B21C9F7C09004DD620 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F3AFC6B41C9F7C17004DD620 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				612837E71CB0A99C0001E97E /* AnswerOption.swift */,
 				612837E91CB0AC9B0001E97E /* SurveyQuestion.swift */,
 				612837EB1CB2098E0001E97E /* Survey.swift */,
+				F37103DE1CB38A3500C355C1 /* DisplayRule.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 			files = (
 				F392A02B1CA4F11D0030ECFF /* LoginViewController.swift in Sources */,
 				F3AFC6B51C9F7C17004DD620 /* UploadViewController.swift in Sources */,
+				F37103DF1CB38A3500C355C1 /* DisplayRule.swift in Sources */,
 				F3C463341CACC7A60078FD43 /* QuestionaireAnswerTableViewCell.swift in Sources */,
 				61D3AA771BDDBFBD00BFE544 /* ProfileViewController.swift in Sources */,
 				612837E81CB0A99C0001E97E /* AnswerOption.swift in Sources */,

@@ -35,6 +35,8 @@ class Service {
     // optional since we might have a key on first run, so check (lazy to keep "")
     var sessionKey: String?
     
+    var survey: Survey?
+    
     // set constructor to private because we want to only use the sharedInstance
     private init(){
         
@@ -121,6 +123,151 @@ class Service {
         })
         
         task.resume()
+    }
+    
+    func refreshQuestions(completion: (inner: () throws -> Bool) -> ()) {
+        
+        let jsonStr = "json={\"key\":\"\(self.sessionKey!)\"}&Submit=Submit".stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
+        
+        
+        let session = NSURLSession.sharedSession()
+        let request = NSMutableURLRequest(URL: NSURL(string: Service.questionsEndPoint, relativeToURL: NSURL(string: Service.restBaseURL))!)
+        
+        // setup post call
+        request.HTTPMethod = "POST";
+        request.HTTPBody = jsonStr!.dataUsingEncoding(NSUTF8StringEncoding)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        
+        let task: NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler:  { (data, response, error) in
+            // do stuff with response, data & error here
+            
+            // first check the obvious, error
+            if let error = error {
+                if error.code == NSURLErrorNotConnectedToInternet {
+                    completion(inner: { throw AuthenticationError.AuthenticationAPINotReachable })
+                    return
+                }
+                completion(inner: { throw AuthenticationError.AuthenticationCallThrewError(error: error) })
+                return
+            }
+            
+            // check the actual response headers
+            if let httpResponse = response as? NSHTTPURLResponse {
+                if httpResponse.statusCode != 200 {
+                    completion(inner: {throw AuthenticationError.AuthenticationResponseNotOK(httpCode: httpResponse.statusCode) })
+                    return
+                }
+            }
+            
+            // at this point, valid json data was passed in
+            do{
+                if let json = try NSJSONSerialization.JSONObjectWithData((NSString(data: data!, encoding:NSASCIIStringEncoding)?.dataUsingEncoding(NSUTF8StringEncoding))!, options: .MutableLeaves) as? NSDictionary {
+                    
+                    var surveyQuestions: [SurveyQuestion] = [SurveyQuestion]()
+                    
+                    if let questions = json["questions"] as? NSArray {
+                        
+                        for question in questions  {
+                            
+                            if let surveyQuestion = question as? NSDictionary {
+                                
+                                //TODO: Need stronger checks
+                                let id = surveyQuestion["id"] as! Int
+                                let abbreviation = surveyQuestion["abbreviation"] as! String
+                                let category = surveyQuestion["category"] as! String
+                                let type = surveyQuestion["type"] as! String
+                                let text = surveyQuestion["text"] as! String
+                                let label = surveyQuestion["label"] as! String
+                                let tipText = surveyQuestion["tip_text"] as! String
+                                let sortOrder = surveyQuestion["sort_order"] as! Int
+                                
+                                var surveyAnswerOptions: [AnswerOption]?
+                                var surveyDisplayRules: [DisplayRule]?
+                                
+                                if let answerOptions = surveyQuestion["answer_options"] as? NSArray {
+                                    
+                                    surveyAnswerOptions = [AnswerOption]()
+                                    
+                                    for answerOption in answerOptions {
+                                        
+                                        if let surveyAnswerOption = answerOption as? NSDictionary {
+                                            let description = surveyAnswerOption["description"] as! String
+                                            let type = surveyAnswerOption["type"] as! String
+                                            let value = surveyAnswerOption["value"] as! Int
+                                            let sortOrder = surveyAnswerOption["sort_order"] as! Int
+                                            
+                                            surveyAnswerOptions?.append(AnswerOption(description: description, type: type, value: value, sortOrder: sortOrder))
+                                        }
+                                    }
+                                    
+                                    
+                                }
+                                
+                                if let displayRules = surveyQuestion["display_rules"] as? NSArray {
+                                    
+                                    surveyDisplayRules = [DisplayRule]()
+                                    
+                                    for displayRule in displayRules {
+                                        
+                                        if let surveyDisplayRule = displayRule as? NSDictionary {
+                                            let property = surveyDisplayRule["property"] as! String
+                                            let type = surveyDisplayRule["type"] as! String
+                                            let operation = surveyDisplayRule["operation"] as! String
+                                            let value = surveyDisplayRule["value"] as! Int
+                                            
+                                            surveyDisplayRules?.append(DisplayRule(property: property, type: type, operation: operation, value: value))
+                                        }
+                                    }
+                                    
+                                    
+                                }
+                                
+                                surveyQuestions.append(SurveyQuestion(id: id, abbreviation: abbreviation, category: category, type: type, text: text, label: label, tipText: tipText, sortOrder: sortOrder, answerOptions: surveyAnswerOptions, displayRules: surveyDisplayRules))
+                                
+                                
+                            }
+                            
+                        }
+                    }
+                    self.survey = Survey(questions: surveyQuestions)
+                }
+                
+            } catch let parseError as NSError {
+                NSLog("error occured: %@",parseError.localizedDescription)
+                completion(inner: {throw AuthenticationError.AuthenticationResponseMalformed(data: data!, error: parseError) })
+                return
+            }
+            
+        })
+        
+        task.resume()
+    
+    }
+    
+    func saveFile() {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentsDirectory = paths[0]
+        let fileName = "\(documentsDirectory)/textFile.txt"
+        let content = "Hello World"
+        do{
+            try content.writeToFile(fileName, atomically: false, encoding: NSUTF8StringEncoding)
+        }catch _ {
+            
+        }
+        
+    }
+    
+    func loadFile()->String {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentsDirectory = paths[0]
+        let fileName = "\(documentsDirectory)/textFile.txt"
+        let content: String
+        do{
+            content = try String(contentsOfFile: fileName, encoding: NSUTF8StringEncoding)
+        }catch _{
+            content=""
+        }
+        return content;
     }
     
     class func getQuestionsWithSuccess(success: ((questions: NSData!) -> Void)) {
