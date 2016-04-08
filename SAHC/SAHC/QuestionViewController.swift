@@ -75,26 +75,21 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         cell.answerLabel.text = currentAnswer.description
         cell.delegate = self
         
-        cell.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_off"), forState: UIControlState.Normal)
-        cell.selectionChoiceBtn.selected = false
-        
-//        if currentAnswer.selected {
-//            if currentAnswer.buttonType == AnswerItem.SelectionButtonType.Radio {
-//                cell.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_on"), forState: UIControlState.Selected)
-//                cell.selectionChoiceBtn.selected = true
-//            } else {
-//                
-//            }
-//
-//        } else {
-//            if currentAnswer.buttonType == AnswerItem.SelectionButtonType.Radio {
-//                cell.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_off"), forState: UIControlState.Normal)
-//                cell.selectionChoiceBtn.selected = false
-//            } else {
-//                
-//            }
-//
-//        }
+        if currentAnswer.selected {
+            if self.questionType == QuestionType.SingleSelect || self.questionType == QuestionType.MultiSelect {
+                cell.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_on"), forState: UIControlState.Selected)
+                cell.selectionChoiceBtn.selected = true
+            }
+
+        } else {
+            if self.questionType == QuestionType.SingleSelect || self.questionType == QuestionType.MultiSelect {
+                cell.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_off"), forState: UIControlState.Normal)
+                cell.selectionChoiceBtn.selected = false
+            } else {
+                
+            }
+
+        }
         
         return cell
     }
@@ -105,19 +100,19 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     func didSelectItemNumber(answerNumber: Int) {
         
-//        self.answerList[answerNumber].selected = true
-//        
-//        // if in single select mode, unselect any other selected buttons
-//        if self.answerList.count > 0 && self.questionType == QuestionType.SingleSelect {
-//            
-//            for index in 0...self.answerList.count - 1 {
-//                if index != answerNumber {
-//                    self.initialList[index].selected = false
-//                }
-//            }
-//            
-//            self.answerTableView.reloadData()
-//        }
+        self.answerList[answerNumber].selected = true
+        
+        // if in single select mode, unselect any other selected buttons
+        if self.answerList.count > 0 && self.questionType == QuestionType.SingleSelect {
+            
+            for index in 0...self.answerList.count - 1 {
+                if index != answerNumber {
+                    self.answerList[index].selected = false
+                }
+            }
+            
+            self.answerTableView.reloadData()
+        }
         
     }
     

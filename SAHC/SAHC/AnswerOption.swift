@@ -13,6 +13,7 @@ class AnswerOption {
     var type: String
     var value: Int
     var sortOrder: Int
+    var selected: Bool = false
     
     init(description: String, type: String, value: Int, sortOrder:Int) {
         self.description = description
