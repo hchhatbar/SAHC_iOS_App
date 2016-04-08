@@ -47,6 +47,7 @@
 		F3AFC6B51C9F7C17004DD620 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AFC6B41C9F7C17004DD620 /* UploadViewController.swift */; };
 		F3C463341CACC7A60078FD43 /* QuestionaireAnswerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C463331CACC7A60078FD43 /* QuestionaireAnswerTableViewCell.swift */; };
 		F3C463371CACD60A0078FD43 /* AnswerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C463361CACD60A0078FD43 /* AnswerItem.swift */; };
+		F3FD6CFC1CB766AC00FC9E50 /* SurveyCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FD6CFB1CB766AC00FC9E50 /* SurveyCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		F3AFC6B41C9F7C17004DD620 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		F3C463331CACC7A60078FD43 /* QuestionaireAnswerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionaireAnswerTableViewCell.swift; sourceTree = "<group>"; };
 		F3C463361CACD60A0078FD43 /* AnswerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerItem.swift; sourceTree = "<group>"; };
+		F3FD6CFB1CB766AC00FC9E50 /* SurveyCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				612837E91CB0AC9B0001E97E /* SurveyQuestion.swift */,
 				612837EB1CB2098E0001E97E /* Survey.swift */,
 				F37103DE1CB38A3500C355C1 /* DisplayRule.swift */,
+				F3FD6CFB1CB766AC00FC9E50 /* SurveyCategory.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F392A02B1CA4F11D0030ECFF /* LoginViewController.swift in Sources */,
+				F3FD6CFC1CB766AC00FC9E50 /* SurveyCategory.swift in Sources */,
 				F3AFC6B51C9F7C17004DD620 /* UploadViewController.swift in Sources */,
 				F37103DF1CB38A3500C355C1 /* DisplayRule.swift in Sources */,
 				F3C463341CACC7A60078FD43 /* QuestionaireAnswerTableViewCell.swift in Sources */,

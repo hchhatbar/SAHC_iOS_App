@@ -43,7 +43,7 @@
                                 <rect key="frame" x="0.0" y="72" width="600" height="479"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HRATableViewCell" id="i6X-tJ-df9" customClass="HRATableViewCell" customModule="SAHC" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HRATableViewCell" id="i6X-tJ-df9" customClass="HRATableViewCell" customModule="SAHC" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i6X-tJ-df9" id="ipQ-YG-DlL">
@@ -114,6 +114,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="checkListTblView" destination="bys-qA-gmK" id="HXX-BO-ZmN"/>
                         <segue destination="oN7-3m-DHu" kind="show" identifier="DashboardToQuestionaireSegue" id="fVT-EB-mKe"/>
                     </connections>
                 </viewController>

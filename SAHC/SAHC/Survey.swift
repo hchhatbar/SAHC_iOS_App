@@ -8,17 +8,7 @@
 
 class Survey {
     
-    
-    var questions: [SurveyQuestion]
+    var questions: [SurveyQuestion] = [SurveyQuestion]()
+    var categories: [SurveyCategory] = [SurveyCategory]()
 
-    
-    
-    init(questions: [SurveyQuestion]) {
-        
-        self.questions = questions
-        
-    }
-
-    
-    
 }

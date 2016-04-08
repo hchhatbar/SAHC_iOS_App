@@ -29,13 +29,14 @@ class Service {
     static let restBaseURL: String = "http://sathiapi.staging.southasianheartcenter.org"
     static let authenticationEndPoint: String = "authenticate.php"
     static let questionsEndPoint: String = "questions.php"
+    static let categoriesEndPoint: String = "categories.php"
     // MARK: End REST API endpoints
     
     // keep session key here
     // optional since we might have a key on first run, so check (lazy to keep "")
     var sessionKey: String?
     
-    var survey: Survey?
+    var survey: Survey = Survey()
     
     // set constructor to private because we want to only use the sharedInstance
     private init(){
@@ -123,6 +124,76 @@ class Service {
         })
         
         task.resume()
+    }
+    
+    func refreshCategories(completion: (inner: () throws -> Bool) -> ()) {
+        
+        let jsonStr = "json={\"key\":\"\(self.sessionKey!)\"}&Submit=Submit".stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet())
+        
+        
+        let session = NSURLSession.sharedSession()
+        let request = NSMutableURLRequest(URL: NSURL(string: Service.categoriesEndPoint, relativeToURL: NSURL(string: Service.restBaseURL))!)
+        
+        // setup post call
+        request.HTTPMethod = "POST";
+        request.HTTPBody = jsonStr!.dataUsingEncoding(NSUTF8StringEncoding)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        
+        let task: NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler:  { (data, response, error) in
+            // do stuff with response, data & error here
+            
+            // first check the obvious, error
+            if let error = error {
+                if error.code == NSURLErrorNotConnectedToInternet {
+                    completion(inner: { throw AuthenticationError.AuthenticationAPINotReachable })
+                    return
+                }
+                completion(inner: { throw AuthenticationError.AuthenticationCallThrewError(error: error) })
+                return
+            }
+            
+            // check the actual response headers
+            if let httpResponse = response as? NSHTTPURLResponse {
+                if httpResponse.statusCode != 200 {
+                    completion(inner: {throw AuthenticationError.AuthenticationResponseNotOK(httpCode: httpResponse.statusCode) })
+                    return
+                }
+            }
+            
+            // at this point, valid json data was passed in
+            do{
+                if let json = try NSJSONSerialization.JSONObjectWithData((NSString(data: data!, encoding:NSASCIIStringEncoding)?.dataUsingEncoding(NSUTF8StringEncoding))!, options: .MutableLeaves) as? NSArray {
+                    
+                    var surveyCategories: [SurveyCategory] = [SurveyCategory]()
+                        
+                        for category in json  {
+                            
+                            if let category = category as? NSDictionary {
+                                
+                                //TODO: Need stronger checks
+                                let id = category["id"] as! String
+                                let section = category["section"] as! String
+                                
+                                surveyCategories.append(SurveyCategory(section: section, id: id))
+                            }
+                            
+                        }
+                    
+                    self.survey.categories = surveyCategories
+                }
+                
+                completion(inner: { return true })
+                
+            } catch let parseError as NSError {
+                NSLog("error occured: %@",parseError.localizedDescription)
+                completion(inner: {throw AuthenticationError.AuthenticationResponseMalformed(data: data!, error: parseError) })
+                return
+            }
+            
+        })
+        
+        task.resume()
+        
     }
     
     func refreshQuestions(completion: (inner: () throws -> Bool) -> ()) {
@@ -229,8 +300,10 @@ class Service {
                             
                         }
                     }
-                    self.survey = Survey(questions: surveyQuestions)
+                    self.survey.questions = surveyQuestions
                 }
+                
+                completion(inner: { return true })
                 
             } catch let parseError as NSError {
                 NSLog("error occured: %@",parseError.localizedDescription)

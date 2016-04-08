@@ -10,15 +10,10 @@ import UIKit
 
 class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let initialHRACheckList: [HRAItem] = [
-        HRAItem(image: UIImage(named: "Introduction")!, itemName: "Get Started"),
-        HRAItem(image: UIImage(named: "PersonalStatus")!, itemName: "Personal Status"),
-        HRAItem(image: UIImage(named: "MedicalHistory")!, itemName: "Medical History"),
-        HRAItem(image: UIImage(named: "Exercise")!, itemName: "Exercise"),
-        HRAItem(image: UIImage(named: "Diet")!, itemName: "Diet"),
-        HRAItem(image: UIImage(named: "Sleep")!, itemName: "Sleep"),
-        HRAItem(image: UIImage(named: "Conclusion")!, itemName: "Next Steps")
-    ]
+    @IBOutlet var checkListTblView: UITableView!
+    var hud: MBProgressHUD = MBProgressHUD()
+    
+    var checkList: [SurveyCategory] = [SurveyCategory]()
 
 //    var scroll = UIScrollView()
     override func viewDidLoad() {
@@ -27,20 +22,43 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         print(Service.sharedInstance.sessionKey)
         
+        self.hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        self.hud.mode = MBProgressHUDMode.AnnularDeterminate
+        self.hud.label.text = NSLocalizedString("Loading Questions...", comment: "Loading questions for spinner")
+        
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), {
             
-            Service.sharedInstance.refreshQuestions { (inner: () throws -> Bool) -> Void in
+            Service.sharedInstance.refreshCategories { (inner: () throws -> Bool) -> Void in
                 
+                do {
+                    let success = try inner() // get result
+                    if success {
+                        self.checkList = Service.sharedInstance.survey.categories
+                        dispatch_async(dispatch_get_main_queue(), {
+                            self.checkListTblView.reloadData()
+                            self.hud.hideAnimated(true)
+                        })
+                    }
+                } catch let error {
+                    print(error)
+                }
+                
+            }
+            
+            Service.sharedInstance.refreshQuestions { (inner: () throws -> Bool) -> Void in
                 // dismiss spinner
-//                dispatch_async(dispatch_get_main_queue(), {
-//                    hud.hideAnimated(true)
-//                })
+                //                dispatch_async(dispatch_get_main_queue(), {
+                //                    hud.hideAnimated(true)
+                //                })
                 
                 do {
                     let success = try inner() // get result
                 } catch let error {
+                    print(error)
                 }
+                
             }
+            
         })
         
 //        Service.getQuestionsWithSuccess { (questions) -> Void in
@@ -117,23 +135,23 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         if segue.destinationViewController is QuestionViewController {
             let viewController = segue.destinationViewController as! QuestionViewController
-            viewController.navigationItem.title = self.initialHRACheckList[index].itemName
-            viewController.questions = (Service.sharedInstance.survey?.questions.filter({ $0.category == String(index+1) }))!
+            viewController.navigationItem.title = self.checkList[index].section
+            viewController.questions = Service.sharedInstance.survey.questions.filter({ $0.category == String(index+1) })
         }
     }
     
     // MARK: UITableViewDataSource methods
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.initialHRACheckList.count
+        return self.checkList.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("HRATableViewCell") as! HRATableViewCell
         
-        cell.itemImageView.image = self.initialHRACheckList[indexPath.row].image
-        cell.itemNameLbl.text = self.initialHRACheckList[indexPath.row].itemName
+        cell.itemImageView.image = UIImage(named: self.checkList[indexPath.row].section)
+        cell.itemNameLbl.text = self.checkList[indexPath.row].section
         //cell.progressView.progress = self.initialHRACheckList[indexPath.row].progress
         
         return cell
@@ -142,7 +160,11 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
     // MARK: End UITableViewDataSource methods
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("DashboardToQuestionaireSegue", sender: indexPath.row)
+        // check if there are actual questions behind the category
+        if Service.sharedInstance.survey.questions.filter({ $0.category == String(indexPath.row+1) }).count > 0 {
+            self.performSegueWithIdentifier("DashboardToQuestionaireSegue", sender: indexPath.row)
+        }
+        
     }
     
     // MARK: UITableViewDelegate methods
