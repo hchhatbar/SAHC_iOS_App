@@ -118,6 +118,7 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
         if segue.destinationViewController is QuestionViewController {
             let viewController = segue.destinationViewController as! QuestionViewController
             viewController.navigationItem.title = self.initialHRACheckList[index].itemName
+            viewController.questions = (Service.sharedInstance.survey?.questions.filter({ $0.category == String(index+1) }))!
         }
     }
     

@@ -144,8 +144,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFE-5f-F9i">
-                                                    <rect key="frame" x="56" y="11" width="536" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFE-5f-F9i">
+                                                    <rect key="frame" x="56" y="0.0" width="489" height="43.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="WTS-Tt-zXJ"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -168,7 +171,7 @@
                                                 <constraint firstItem="UUy-5l-QkA" firstAttribute="leading" secondItem="V44-1f-wtU" secondAttribute="leadingMargin" constant="20" id="XDW-hj-aD6"/>
                                                 <constraint firstItem="UUy-5l-QkA" firstAttribute="top" secondItem="V44-1f-wtU" secondAttribute="topMargin" constant="3" id="np1-le-fJF"/>
                                                 <constraint firstItem="iFE-5f-F9i" firstAttribute="centerY" secondItem="V44-1f-wtU" secondAttribute="centerY" id="sMV-QZ-hNy"/>
-                                                <constraint firstItem="iFE-5f-F9i" firstAttribute="trailing" secondItem="V44-1f-wtU" secondAttribute="trailingMargin" id="zxY-Rd-2ZL"/>
+                                                <constraint firstItem="iFE-5f-F9i" firstAttribute="trailing" secondItem="V44-1f-wtU" secondAttribute="trailingMargin" constant="-47" id="zxY-Rd-2ZL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -220,6 +223,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerTableView" destination="rbF-sZ-XSW" id="uDK-33-is8"/>
+                        <outlet property="questionLbl" destination="u8P-vW-KIM" id="fLV-GL-QMb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4i-WG-ocz" sceneMemberID="firstResponder"/>

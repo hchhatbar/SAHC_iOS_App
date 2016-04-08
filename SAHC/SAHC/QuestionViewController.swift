@@ -11,59 +11,90 @@ import UIKit
 class QuestionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, QuestionaireAnswerDelegate {
     
     @IBOutlet var answerTableView: UITableView!
-    enum QuestionType {
-        case SingleSelect,MultiSelect
+    
+    @IBOutlet var questionLbl: UILabel!
+    enum QuestionType: String {
+        case SingleSelect = "rb",
+        MultiSelect = "ch",
+        InputAnswer = "txt"
     }
     
-    var questionType: QuestionType = QuestionType.SingleSelect
+    var questions: [SurveyQuestion] = [SurveyQuestion]()
+    var currentQuestion: SurveyQuestion?
     
+    var questionType: QuestionType?
     var questionNumber: Int = 0
     
-    let initialList: [AnswerItem] = [
-        AnswerItem(answerValue: "None, I live alone"),
-        AnswerItem(answerValue: "Spouse Only"),
-        AnswerItem(answerValue: "Children/Spouse"),
-        AnswerItem(answerValue: "Parents/Other Relatives"),
-        AnswerItem(answerValue: "Significant Other")
-    ]
+    var answerList: [AnswerOption] = [AnswerOption]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.questions.sortInPlace({ $0.sortOrder < $1.sortOrder })
+        self.loadQuestion(0)
+    }
+    
+    private func loadQuestion(questionNumber: Int) {
+        
+        self.currentQuestion = self.questions[questionNumber]
+        
+        // set question type
+        if let type = self.currentQuestion?.type {
+            self.questionType = QuestionType(rawValue: type)
+        }
+        
+        // TODO: should load different kind of tableview based on selection or show a text input if necessary
+        if let questionTxt = self.currentQuestion?.text {
+            self.questionLbl.text = "Q: " + questionTxt
+        }
+        
+        
+        if let answerOptions = self.currentQuestion?.answerOptions {
+            self.answerList = answerOptions
+            self.answerList.sortInPlace({$0.sortOrder < $1.sortOrder})
+        }
+        
+        self.questionNumber = questionNumber
+        
+        self.answerTableView.reloadData()
+        
     }
     
     // MARK: UITableViewDataSource methods
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return answerList.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("QuestionaireAnswerTableViewCell") as! QuestionaireAnswerTableViewCell
         
-        let currentAnswer = initialList[indexPath.row]
+        let currentAnswer = answerList[indexPath.row]
         
         cell.answerNumber = indexPath.row
-        cell.answerLabel.text = currentAnswer.answerValue
+        cell.answerLabel.text = currentAnswer.description
         cell.delegate = self
         
-        if currentAnswer.selected {
-            if currentAnswer.buttonType == AnswerItem.SelectionButtonType.Radio {
-                cell.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_on"), forState: UIControlState.Selected)
-                cell.selectionChoiceBtn.selected = true
-            } else {
-                
-            }
-
-        } else {
-            if currentAnswer.buttonType == AnswerItem.SelectionButtonType.Radio {
-                cell.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_off"), forState: UIControlState.Normal)
-                cell.selectionChoiceBtn.selected = false
-            } else {
-                
-            }
-
-        }
+        cell.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_off"), forState: UIControlState.Normal)
+        cell.selectionChoiceBtn.selected = false
+        
+//        if currentAnswer.selected {
+//            if currentAnswer.buttonType == AnswerItem.SelectionButtonType.Radio {
+//                cell.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_on"), forState: UIControlState.Selected)
+//                cell.selectionChoiceBtn.selected = true
+//            } else {
+//                
+//            }
+//
+//        } else {
+//            if currentAnswer.buttonType == AnswerItem.SelectionButtonType.Radio {
+//                cell.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_off"), forState: UIControlState.Normal)
+//                cell.selectionChoiceBtn.selected = false
+//            } else {
+//                
+//            }
+//
+//        }
         
         return cell
     }
@@ -74,19 +105,19 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     func didSelectItemNumber(answerNumber: Int) {
         
-        self.initialList[answerNumber].selected = true
-        
-        // if in single select mode, unselect any other selected buttons
-        if self.initialList.count > 0 && self.questionType == QuestionType.SingleSelect {
-            
-            for index in 0...self.initialList.count - 1 {
-                if index != answerNumber {
-                    self.initialList[index].selected = false
-                }
-            }
-            
-            self.answerTableView.reloadData()
-        }
+//        self.answerList[answerNumber].selected = true
+//        
+//        // if in single select mode, unselect any other selected buttons
+//        if self.answerList.count > 0 && self.questionType == QuestionType.SingleSelect {
+//            
+//            for index in 0...self.answerList.count - 1 {
+//                if index != answerNumber {
+//                    self.initialList[index].selected = false
+//                }
+//            }
+//            
+//            self.answerTableView.reloadData()
+//        }
         
     }
     
@@ -104,12 +135,18 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
             self.navigationController?.popViewControllerAnimated(true)
         } else {
             // load previous question
+            self.loadQuestion(self.questionNumber-1)
         }
     }
     
     @IBAction func rightArrowBtnPressed(sender: AnyObject) {
         
         // load next question
+        if self.questionNumber + 1 == self.questions.count {
+            self.navigationController?.popViewControllerAnimated(true)
+        } else {
+            self.loadQuestion(self.questionNumber+1)
+        }
     }
     
     
