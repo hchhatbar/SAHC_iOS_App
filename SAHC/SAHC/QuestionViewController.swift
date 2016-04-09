@@ -156,7 +156,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func infoBtnPressed(sender: AnyObject) {
         
-        let alert = UIAlertController(title: NSLocalizedString("Info", comment: "Information for question"), message: self.currentQuestion?.tipText, preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: self.currentQuestion?.label, message: self.currentQuestion?.tipText, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Okay"), style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
         
