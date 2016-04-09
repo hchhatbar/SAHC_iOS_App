@@ -63,7 +63,7 @@
                                                         <constraint firstAttribute="width" constant="179" id="zfL-4J-XBG"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="6d6-fN-m8c">
@@ -135,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rbF-sZ-XSW">
-                                <rect key="frame" x="0.0" y="136" width="600" height="415"/>
+                                <rect key="frame" x="0.0" y="168" width="600" height="383"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionaireAnswerTableViewCell" id="0il-hh-Shu" customClass="QuestionaireAnswerTableViewCell" customModule="SAHC" customModuleProvider="target">
@@ -151,7 +151,7 @@
                                                         <constraint firstAttribute="height" constant="43.5" id="WTS-Tt-zXJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUy-5l-QkA">
@@ -186,25 +186,33 @@
                                     <outlet property="delegate" destination="oN7-3m-DHu" id="WFM-PU-pyJ"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q: Are you married, seperated, never married, or divorced?" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8P-vW-KIM">
-                                <rect key="frame" x="20" y="72" width="560" height="56"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q: Are you married, seperated, never married, or divorced?" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8P-vW-KIM">
+                                <rect key="frame" x="20" y="87" width="560" height="73"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="DgS-yi-YIE"/>
+                                    <constraint firstAttribute="height" constant="73" id="DgS-yi-YIE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXV-So-MJB">
+                                <rect key="frame" x="558" y="72" width="22" height="22"/>
+                                <connections>
+                                    <action selector="infoBtnPressed:" destination="oN7-3m-DHu" eventType="touchUpInside" id="fPL-JS-dZq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="u8P-vW-KIM" firstAttribute="centerX" secondItem="rbF-sZ-XSW" secondAttribute="centerX" id="8od-bR-AF8"/>
                             <constraint firstItem="rbF-sZ-XSW" firstAttribute="bottom" secondItem="qa2-cO-YJs" secondAttribute="top" id="DPV-K1-N3q"/>
                             <constraint firstItem="u8P-vW-KIM" firstAttribute="trailing" secondItem="GuB-ua-rQF" secondAttribute="trailingMargin" id="G7r-3p-ZW6"/>
-                            <constraint firstItem="rbF-sZ-XSW" firstAttribute="top" secondItem="u8P-vW-KIM" secondAttribute="bottom" constant="8" symbolic="YES" id="hn8-Zd-e43"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GXV-So-MJB" secondAttribute="trailing" id="GQQ-hf-9jk"/>
+                            <constraint firstItem="rbF-sZ-XSW" firstAttribute="top" secondItem="u8P-vW-KIM" secondAttribute="bottom" constant="8" id="hn8-Zd-e43"/>
                             <constraint firstItem="rbF-sZ-XSW" firstAttribute="leading" secondItem="GuB-ua-rQF" secondAttribute="leading" id="mpv-cg-qPa"/>
                             <constraint firstAttribute="leadingMargin" secondItem="u8P-vW-KIM" secondAttribute="leading" id="t1P-3I-GCS"/>
-                            <constraint firstItem="u8P-vW-KIM" firstAttribute="top" secondItem="ILm-Us-slI" secondAttribute="bottom" constant="8" symbolic="YES" id="yj0-ob-npj"/>
+                            <constraint firstItem="GXV-So-MJB" firstAttribute="top" secondItem="ILm-Us-slI" secondAttribute="bottom" constant="8" id="tPp-ig-29w"/>
+                            <constraint firstItem="u8P-vW-KIM" firstAttribute="top" secondItem="ILm-Us-slI" secondAttribute="bottom" constant="23" id="yj0-ob-npj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="HRA" image="first" id="zU6-e4-GJC"/>
