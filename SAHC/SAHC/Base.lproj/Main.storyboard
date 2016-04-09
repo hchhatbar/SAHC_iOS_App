@@ -142,11 +142,11 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0il-hh-Shu" id="V44-1f-wtU">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFE-5f-F9i">
-                                                    <rect key="frame" x="56" y="0.0" width="489" height="43.5"/>
+                                                    <rect key="frame" x="56" y="0.0" width="489" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43.5" id="WTS-Tt-zXJ"/>
                                                     </constraints>
@@ -154,7 +154,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUy-5l-QkA">
+                                                <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUy-5l-QkA">
                                                     <rect key="frame" x="28" y="11" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="ynG-O0-wK6"/>
@@ -201,6 +201,12 @@
                                     <action selector="infoBtnPressed:" destination="oN7-3m-DHu" eventType="touchUpInside" id="fPL-JS-dZq"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SCZ-dd-92f">
+                                <rect key="frame" x="15" y="168" width="571" height="234"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -208,8 +214,12 @@
                             <constraint firstItem="rbF-sZ-XSW" firstAttribute="bottom" secondItem="qa2-cO-YJs" secondAttribute="top" id="DPV-K1-N3q"/>
                             <constraint firstItem="u8P-vW-KIM" firstAttribute="trailing" secondItem="GuB-ua-rQF" secondAttribute="trailingMargin" id="G7r-3p-ZW6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GXV-So-MJB" secondAttribute="trailing" id="GQQ-hf-9jk"/>
+                            <constraint firstItem="SCZ-dd-92f" firstAttribute="leading" secondItem="GuB-ua-rQF" secondAttribute="leadingMargin" constant="-5" id="HE5-RB-qkS"/>
+                            <constraint firstItem="qa2-cO-YJs" firstAttribute="top" secondItem="SCZ-dd-92f" secondAttribute="bottom" constant="149" id="Tpx-Xh-8NA"/>
                             <constraint firstItem="rbF-sZ-XSW" firstAttribute="top" secondItem="u8P-vW-KIM" secondAttribute="bottom" constant="8" id="hn8-Zd-e43"/>
+                            <constraint firstItem="SCZ-dd-92f" firstAttribute="centerX" secondItem="u8P-vW-KIM" secondAttribute="centerX" id="kLe-9n-CGN"/>
                             <constraint firstItem="rbF-sZ-XSW" firstAttribute="leading" secondItem="GuB-ua-rQF" secondAttribute="leading" id="mpv-cg-qPa"/>
+                            <constraint firstItem="SCZ-dd-92f" firstAttribute="top" secondItem="rbF-sZ-XSW" secondAttribute="top" id="sHs-ok-F2u"/>
                             <constraint firstAttribute="leadingMargin" secondItem="u8P-vW-KIM" secondAttribute="leading" id="t1P-3I-GCS"/>
                             <constraint firstItem="GXV-So-MJB" firstAttribute="top" secondItem="ILm-Us-slI" secondAttribute="bottom" constant="8" id="tPp-ig-29w"/>
                             <constraint firstItem="u8P-vW-KIM" firstAttribute="top" secondItem="ILm-Us-slI" secondAttribute="bottom" constant="23" id="yj0-ob-npj"/>
@@ -232,6 +242,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerTableView" destination="rbF-sZ-XSW" id="uDK-33-is8"/>
+                        <outlet property="answerTxtView" destination="SCZ-dd-92f" id="5Eo-mw-b8o"/>
                         <outlet property="questionLbl" destination="u8P-vW-KIM" id="fLV-GL-QMb"/>
                     </connections>
                 </viewController>

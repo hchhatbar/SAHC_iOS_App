@@ -12,6 +12,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet var answerTableView: UITableView!
     
+    @IBOutlet var answerTxtView: UITextView!
     @IBOutlet var questionLbl: UILabel!
     enum QuestionType: String {
         case SingleSelect = "rb",
@@ -40,6 +41,15 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         // set question type
         if let type = self.currentQuestion?.type {
             self.questionType = QuestionType(rawValue: type)
+            if self.questionType == QuestionType.InputAnswer {
+                self.answerTableView.hidden = true
+                self.answerTxtView.hidden = false
+                self.answerTxtView.becomeFirstResponder()
+            } else {
+                self.answerTableView.hidden = false
+                self.answerTxtView.hidden = true
+                self.answerTxtView.resignFirstResponder()
+            }
         }
         
         // TODO: should load different kind of tableview based on selection or show a text input if necessary
