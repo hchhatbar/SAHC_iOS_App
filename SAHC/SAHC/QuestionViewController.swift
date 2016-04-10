@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class QuestionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, QuestionaireAnswerDelegate {
     
@@ -122,6 +123,49 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
             }
             
             self.answerTableView.reloadData()
+        }
+        
+        // need to migrate this to DataController later
+        let moc = DataController.sharedInstance.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "SurveyAnswer")
+        if let currQuestion = self.currentQuestion {
+            fetchRequest.predicate = NSPredicate(format: "questionId == %d", currQuestion.id)
+            do {
+                let surveyAnswers = try moc.executeFetchRequest(fetchRequest) as! [SurveyAnswer]
+                
+                // really inefficient, trying to resave the values back to db
+                if surveyAnswers.count > 0 { // there should only be one result anyways
+                    for surveyAnswer in surveyAnswers {
+                        var answers: [Int] = [Int]()
+                        for answerOption in self.answerList {
+                            if answerOption.selected {
+                                answers.append(answerOption.value)
+                            }
+                        }
+                        surveyAnswer.answerValues = answers // surveyAnswer should be a managed object...
+                    }
+                    
+                    do {
+                        try moc.save()
+                    } catch {
+                        fatalError("Failure to save context: \(error)")
+                    }
+                } else {
+                    let surveyAnswer = NSEntityDescription.insertNewObjectForEntityForName("SurveyAnswer", inManagedObjectContext: moc) as! SurveyAnswer
+                    
+                    surveyAnswer.questionId = currQuestion.id
+                    surveyAnswer.answerValues = [self.answerList[answerNumber].value]
+                    
+                    do {
+                        try moc.save()
+                    } catch {
+                        fatalError("Failure to save context: \(error)")
+                    }
+                    
+                }
+            } catch {
+                fatalError("Failed to fetch: \(error)")
+            }
         }
         
     }

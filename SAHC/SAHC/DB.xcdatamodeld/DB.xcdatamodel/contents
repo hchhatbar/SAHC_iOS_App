@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 4.3">
     <entity name="Answer" representedClassName="Answer" syncable="YES">
         <attribute name="answerId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="answerText" optional="YES" attributeType="String" syncable="YES"/>
@@ -27,9 +27,15 @@
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="answer" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="AnswerChoice" inverseName="question" inverseEntity="AnswerChoice" syncable="YES"/>
     </entity>
+    <entity name="SurveyAnswer" representedClassName=".SurveyAnswer" syncable="YES">
+        <attribute name="answerTxt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="answerValues" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="questionId" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Answer" positionX="-27" positionY="72" width="128" height="90"/>
         <element name="AnswerChoice" positionX="-54" positionY="36" width="128" height="150"/>
         <element name="Question" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="SurveyAnswer" positionX="-54" positionY="72" width="128" height="90"/>
     </elements>
 </model>
