@@ -77,6 +77,42 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
             if questionType == QuestionType.InputAnswer {
                 if !self.answerTxtView.text.isEmpty {
                     self.currentQuestion?.answerTxt = self.answerTxtView.text
+                    // need to migrate this to DataController later
+                    let moc = DataController.sharedInstance.managedObjectContext
+                    let fetchRequest = NSFetchRequest(entityName: "SurveyAnswer")
+                    if let currQuestion = self.currentQuestion {
+                        fetchRequest.predicate = NSPredicate(format: "questionId == %d", currQuestion.id)
+                        do {
+                            let surveyAnswers = try moc.executeFetchRequest(fetchRequest) as! [SurveyAnswer]
+                            
+                            // really inefficient, trying to resave the values back to db
+                            if surveyAnswers.count > 0 { // there should only be one result anyways
+                                for surveyAnswer in surveyAnswers {
+                                    surveyAnswer.answerTxt = self.answerTxtView.text // surveyAnswer should be a managed object...
+                                }
+                                
+                                do {
+                                    try moc.save()
+                                } catch {
+                                    fatalError("Failure to save context: \(error)")
+                                }
+                            } else {
+                                let surveyAnswer = NSEntityDescription.insertNewObjectForEntityForName("SurveyAnswer", inManagedObjectContext: moc) as! SurveyAnswer
+                                
+                                surveyAnswer.questionId = currQuestion.id
+                                surveyAnswer.answerTxt = self.answerTxtView.text
+                                
+                                do {
+                                    try moc.save()
+                                } catch {
+                                    fatalError("Failure to save context: \(error)")
+                                }
+                                
+                            }
+                        } catch {
+                            fatalError("Failed to fetch: \(error)")
+                        }
+                    }
                 }
             }
         }
