@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -53,6 +54,47 @@ class HRAViewController: UIViewController, UITableViewDataSource, UITableViewDel
                 
                 do {
                     let success = try inner() // get result
+                    if success {
+                        // populate answers from db
+                        for question in Service.sharedInstance.survey.questions {
+                            // need to migrate this to DataController later
+                            let moc = DataController.sharedInstance.managedObjectContext
+                            let fetchRequest = NSFetchRequest(entityName: "SurveyAnswer")
+                                fetchRequest.predicate = NSPredicate(format: "questionId == %d", question.id)
+                                do {
+                                    let surveyAnswers = try moc.executeFetchRequest(fetchRequest) as! [SurveyAnswer]
+                                    
+                                    // really inefficient, trying to resave the values back to db
+                                    if surveyAnswers.count > 0 { // there should only be one result anyways
+                                        for surveyAnswer in surveyAnswers {
+                                            
+                                            if question.type == QuestionViewController.QuestionType.InputAnswer.rawValue {
+                                                
+                                                question.answerTxt = surveyAnswer.answerTxt
+                                                
+                                            } else {
+                                                
+                                                for answerValue in surveyAnswer.answerValues as! [Int] {
+                                                    
+                                                    if let answerOptions = question.answerOptions {
+                                                        for answerOption in answerOptions {
+                                                            
+                                                            if answerValue == answerOption.value {
+                                                                answerOption.selected = true
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                
+                                    }
+                                } catch {
+                                    fatalError("Failed to fetch: \(error)")
+                                }
+                            
+                        }
+                    } // end if success
                 } catch let error {
                     print(error)
                 }
