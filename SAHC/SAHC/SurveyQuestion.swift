@@ -18,6 +18,7 @@ class SurveyQuestion {
     var sortOrder: Int
     var answerOptions: [AnswerOption]?
     var displayRules: [DisplayRule]?
+    var answerTxt: String?
     
     init(id: Int, abbreviation: String, category: String, type: String, text: String, label: String, tipText: String, sortOrder: Int, answerOptions: [AnswerOption]?, displayRules: [DisplayRule]?) {
         

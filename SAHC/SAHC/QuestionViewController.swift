@@ -45,6 +45,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
             if self.questionType == QuestionType.InputAnswer {
                 self.answerTableView.hidden = true
                 self.answerTxtView.hidden = false
+                self.answerTxtView.text = self.currentQuestion?.answerTxt
                 self.answerTxtView.becomeFirstResponder()
             } else {
                 self.answerTableView.hidden = false
@@ -68,6 +69,17 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.answerTableView.reloadData()
         
+    }
+    
+    func saveQuestionAnswerTxtIfNeeded() {
+        
+        if let questionType = self.questionType {
+            if questionType == QuestionType.InputAnswer {
+                if !self.answerTxtView.text.isEmpty {
+                    self.currentQuestion?.answerTxt = self.answerTxtView.text
+                }
+            }
+        }
     }
     
     // MARK: UITableViewDataSource methods
@@ -180,6 +192,8 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func leftArrowBtnPressed(sender: AnyObject) {
         
+        self.saveQuestionAnswerTxtIfNeeded()
+        
         if questionNumber == 0 {
             self.navigationController?.popViewControllerAnimated(true)
         } else {
@@ -189,6 +203,8 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func rightArrowBtnPressed(sender: AnyObject) {
+        
+        self.saveQuestionAnswerTxtIfNeeded()
         
         // load next question
         if self.questionNumber + 1 == self.questions.count {
