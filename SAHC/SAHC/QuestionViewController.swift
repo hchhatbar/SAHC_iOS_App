@@ -135,16 +135,22 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         cell.delegate = self
         
         if currentAnswer.selected {
-            if self.questionType == QuestionType.SingleSelect || self.questionType == QuestionType.MultiSelect {
+            if self.questionType == QuestionType.SingleSelect {
                 cell.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_on"), forState: UIControlState.Selected)
+                cell.selectionChoiceBtn.selected = true
+            } else if self.questionType == QuestionType.MultiSelect {
+                cell.selectionChoiceBtn.setImage(UIImage(named: "checkbox_btn_on"), forState: UIControlState.Selected)
                 cell.selectionChoiceBtn.selected = true
             }
 
         } else {
-            if self.questionType == QuestionType.SingleSelect || self.questionType == QuestionType.MultiSelect {
+            if self.questionType == QuestionType.SingleSelect {
                 cell.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_off"), forState: UIControlState.Normal)
                 cell.selectionChoiceBtn.selected = false
-            } else {
+            } else if self.questionType == QuestionType.MultiSelect {
+                cell.selectionChoiceBtn.setImage(UIImage(named: "checkbox_btn_off"), forState: UIControlState.Normal)
+                cell.selectionChoiceBtn.selected = false
+            }else {
                 
             }
 
