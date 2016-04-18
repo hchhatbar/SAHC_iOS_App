@@ -132,6 +132,10 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
         
         cell.answerNumber = indexPath.row
         cell.answerLabel.text = currentAnswer.description
+        if let questionType = self.questionType {
+            cell.buttonType = questionType
+        }
+        
         cell.delegate = self
         
         if currentAnswer.selected {

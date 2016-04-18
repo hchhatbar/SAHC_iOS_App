@@ -15,11 +15,7 @@ protocol QuestionaireAnswerDelegate {
 
 class QuestionaireAnswerTableViewCell: UITableViewCell {
     
-    enum SelectionButtonType {
-        case CheckMark, Radio
-    }
-    
-    var buttonType: SelectionButtonType = SelectionButtonType.Radio
+    var buttonType: QuestionViewController.QuestionType = QuestionViewController.QuestionType.SingleSelect
     var answerNumber: Int = 0 // needs to be set properly
     var delegate: QuestionaireAnswerDelegate?
 
@@ -29,8 +25,10 @@ class QuestionaireAnswerTableViewCell: UITableViewCell {
     @IBAction func selectionBtnPressed(sender: AnyObject) {
         
         if self.selectionChoiceBtn.selected {
-            if buttonType == SelectionButtonType.Radio {
+            if buttonType == QuestionViewController.QuestionType.SingleSelect {
                 self.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_off"), forState: UIControlState.Normal)
+            } else if buttonType == QuestionViewController.QuestionType.MultiSelect {
+                self.selectionChoiceBtn.setImage(UIImage(named: "checkbox_btn_off"), forState: UIControlState.Normal)
             } else {
                 
             }
@@ -39,8 +37,10 @@ class QuestionaireAnswerTableViewCell: UITableViewCell {
             
             self.delegate?.didUnselectItemNumber(self.answerNumber)
         } else {
-            if buttonType == SelectionButtonType.Radio {
+            if buttonType == QuestionViewController.QuestionType.SingleSelect {
                 self.selectionChoiceBtn.setImage(UIImage(named: "radio_btn_on"), forState: UIControlState.Selected)
+            } else if buttonType == QuestionViewController.QuestionType.MultiSelect {
+                self.selectionChoiceBtn.setImage(UIImage(named: "checkbox_btn_on"), forState: UIControlState.Selected)
             } else {
                 
             }
