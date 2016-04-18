@@ -284,7 +284,7 @@ class Service {
                                             let property = surveyDisplayRule["property"] as! String
                                             let type = surveyDisplayRule["type"] as! String
                                             let operation = surveyDisplayRule["operation"] as! String
-                                            let value = surveyDisplayRule["value"] as! Int
+                                            let value = surveyDisplayRule["value"] as! String
                                             
                                             surveyDisplayRules?.append(DisplayRule(property: property, type: type, operation: operation, value: value))
                                         }

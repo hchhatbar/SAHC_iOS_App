@@ -11,9 +11,9 @@ class DisplayRule {
     var property: String
     var type: String
     var operation: String
-    var value: Int
+    var value: String
     
-    init(property: String, type: String, operation: String, value: Int) {
+    init(property: String, type: String, operation: String, value: String) {
         self.property = property
         self.type = type
         self.operation = operation
