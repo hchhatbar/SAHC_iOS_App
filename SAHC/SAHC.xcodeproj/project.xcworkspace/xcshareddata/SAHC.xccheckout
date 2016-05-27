@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>47634F75-25B7-44F7-ACF6-9EB6CAB6B44B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>SAHC</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>532880267E05A6AE868B1FFF05A76FE3793F3EE6</key>
 		<string>https://github.com/hchhatbar/SAHC_iOS_App.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SAHC/SAHC.xcodeproj/project.xcworkspace</string>
+	<string>SAHC/SAHC.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>532880267E05A6AE868B1FFF05A76FE3793F3EE6</key>

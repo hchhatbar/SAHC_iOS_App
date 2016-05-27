@@ -221,6 +221,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
                     }
                     
                 }
+                rightArrow();
             } catch {
                 fatalError("Failed to fetch: \(error)")
             }
@@ -295,6 +296,10 @@ class QuestionViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func rightArrowBtnPressed(sender: AnyObject) {
         
+        rightArrow();
+    }
+    
+    func rightArrow() {
         self.saveQuestionAnswerTxtIfNeeded()
         
         // load next question
